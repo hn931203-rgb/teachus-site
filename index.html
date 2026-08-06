@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>티처스(Teachus) — 전국 1:1 방문과외·화상과외·수능·입시컨설팅 매칭 플랫폼</title>
+  <meta name="description" content="경력 명문대 전공 교사와 1:1 맞춤 과외를 연결합니다. 방문과외·화상과외·수능·내신·경시대회·입시컨설팅·성인 영어·일본어·중국어 회화. 지금 무료 상담 신청!">
+  <meta name="keywords" content="방문과외,화상과외,수능과외,내신과외,수학과외,영어과외,국어과외,과학과외,입시컨설팅,학군지과외,대치동과외,목동과외,경시대회,KMO,수학올림피아드,영어회화,일본어회화,중국어회화,성인영어,JLPT,HSK,초등과외,중등과외,고등과외,명문대과외,1대1과외,티처스,teachus">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="티처스 Teachus">
+  <link rel="canonical" href="https://teachus.co.kr/">
+  <meta name="naver-site-verification" content="ec11114fdd1ed892708c3bc01cf52f83df47f250">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="티처스 — 전국 1:1 과외·수능·입시컨설팅 매칭">
+  <meta property="og:description" content="경력 명문대 전공 교사 직접 매칭. 방문과외·화상과외·수능·경시대회·성인회화. 지금 무료 상담!">
+  <meta property="og:url" content="https://teachus.co.kr/">
+  <meta property="og:site_name" content="티처스 Teachus">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:image" content="https://teachus.co.kr/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="티처스 - 전국 1:1 맞춤 과외 매칭 플랫폼">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://teachus.co.kr/og-image.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+KR:wght@700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "티처스 Teachus",
+    "url": "https://teachus.co.kr",
+    "telephone": "010-5551-6230",
+    "description": "전국 1:1 방문과외·화상과외·수능·입시컨설팅 매칭 플랫폼",
+    "areaServed": "KR",
+    "sameAs": ["https://pf.kakao.com/_RxnbXX/friend"]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "티처스 과외 선생님은 어떤 분들인가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "티처스는 대학생 과외가 없습니다. 모든 선생님은 명문대 전공 출신의 경력 있는 전문 교사로만 구성되어 있습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "방문과외와 화상과외 모두 가능한가요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "네, 티처스는 전국 방문과외와 화상과외 모두 지원합니다. 학생의 상황에 맞게 선택하실 수 있습니다."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "수능, 내신, 경시대회 모두 지원하나요?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "수능 전과목, 내신 관리, 수학·과학올림피아드 등 경시대회 대비, 특목고 입시까지 모두 지원합니다."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink:       #0c0c0d;
+      --ink-2:     #141415;
+      --ink-3:     #1c1c1e;
+      --ink-4:     #242426;
+      --cream:     #f2ece0;
+      --cream-dim: rgba(242,236,224,.70);
+      --cream-faint: rgba(242,236,224,.35);
+      --gold:      #c8a84b;
+      --gold-lt:   #dfc17a;
+      --gold-dim:  rgba(200,168,75,.13);
+      --gold-line: rgba(200,168,75,.22);
+      --red:       #e05c4a;
+      --font-serif: 'Playfair Display', 'Noto Serif KR', serif;
+      --font-ko:   'Noto Serif KR', serif;
+      --font-sans: 'Noto Sans KR', sans-serif;
+      --r:         6px;
+      --trans:     .25s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--ink); color: var(--cream); line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── 상단 바 ── */
+    .topbar {
+      background: var(--ink-2);
+      border-bottom: 1px solid var(--gold-line);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 1.45rem; font-weight: 900;
+      letter-spacing: -.5px;
+      color: var(--cream);
+    }
+    .logo span { color: var(--gold); }
+    .nav { display: flex; gap: 28px; align-items: center; }
+    .nav a { font-size: .82rem; font-weight: 500; color: var(--cream-dim); transition: color var(--trans); letter-spacing: .3px; }
+    .nav a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--ink) !important;
+      font-weight: 700 !important;
+      padding: 8px 18px;
+      border-radius: var(--r);
+      font-size: .82rem !important;
+      transition: background var(--trans) !important;
+    }
+    .nav-cta:hover { background: var(--gold-lt) !important; color: var(--ink) !important; }
+
+    /* ── 히어로 ── */
+    .hero {
+      min-height: 92vh;
+      display: flex; align-items: center;
+      padding: 80px 5%;
+      position: relative;
+      overflow: hidden;
+      background: var(--ink);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('/bg1.jpg') center center / cover no-repeat;
+      opacity: 0.13;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(12,12,13,0.97) 0%, rgba(12,12,13,0.75) 50%, rgba(12,12,13,0.92) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+    .hero-eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 24px;
+      color: var(--cream);
+    }
+    .hero-title em { color: var(--gold); font-style: normal; }
+    .hero-desc { font-size: 1rem; color: var(--cream-dim); max-width: 520px; margin-bottom: 36px; line-height: 1.85; }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 700;
+      font-size: .92rem;
+      padding: 14px 28px;
+      border-radius: var(--r);
+      border: none; cursor: pointer;
+      transition: background var(--trans), transform var(--trans);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--gold-lt); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      font-weight: 600;
+      font-size: .92rem;
+      padding: 14px 28px;
+      border-radius: var(--r);
+      border: 1px solid var(--gold-line);
+      cursor: pointer;
+      transition: border-color var(--trans), color var(--trans);
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* 히어로 카드 */
+    .hero-card {
+      background: var(--ink-2);
+      border: 1px solid var(--gold-line);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .hero-card-title { font-family: var(--font-ko); font-size: 1rem; font-weight: 700; margin-bottom: 20px; color: var(--cream); }
+    .hero-form-row { margin-bottom: 14px; }
+    .hero-form-row label { font-size: .75rem; color: var(--cream-faint); display: block; margin-bottom: 6px; letter-spacing: .5px; }
+    .hero-form-row select,
+    .hero-form-row input {
+      width: 100%;
+      background: var(--ink-3);
+      border: 1px solid var(--gold-line);
+      color: var(--cream);
+      padding: 11px 14px;
+      border-radius: var(--r);
+      font-family: var(--font-sans);
+      font-size: .88rem;
+      outline: none;
+      transition: border-color var(--trans);
+    }
+    .hero-form-row select:focus,
+    .hero-form-row input:focus { border-color: var(--gold); }
+    .hero-form-row select option { background: var(--ink-3); }
+    .hero-card .btn-primary { width: 100%; justify-content: center; margin-top: 6px; padding: 13px; }
+    .hero-note { font-size: .72rem; color: var(--cream-faint); text-align: center; margin-top: 12px; }
+
+    /* 통계 */
+    .stats-bar {
+      background: var(--ink-2);
+      border-top: 1px solid var(--gold-line);
+      border-bottom: 1px solid var(--gold-line);
+      padding: 28px 5%;
+    }
+    .stats-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: var(--font-serif); font-size: 2rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .stat-label { font-size: .75rem; color: var(--cream-faint); margin-top: 4px; letter-spacing: .3px; }
+
+    /* 섹션 공통 */
+    .section { padding: 80px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-eyebrow { font-size: .72rem; font-weight: 700; letter-spacing: 2.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; }
+    .section-title {
+      font-family: var(--font-ko);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .section-sub { font-size: .9rem; color: var(--cream-dim); margin-bottom: 48px; }
+    .divider { width: 40px; height: 2px; background: var(--gold); margin: 16px 0 48px; }
+
+    /* 서비스 그리드 */
+    .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .service-card {
+      background: var(--ink-2);
+      border: 1px solid var(--gold-line);
+      border-radius: 10px;
+      padding: 24px 20px;
+      transition: border-color var(--trans), transform var(--trans), background var(--trans);
+      cursor: default;
+    }
+    .service-card:hover { border-color: var(--gold); background: var(--gold-dim); transform: translateY(-2px); }
+    a.service-card { display: block; cursor: pointer; }
+    .service-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: var(--font-ko); font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
+    .service-card p { font-size: .78rem; color: var(--cream-faint); line-height: 1.6; }
+
+    /* 과목 탭 */
+    .tabs-wrap { margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tab-btn {
+      background: var(--ink-3);
+      border: 1px solid var(--gold-line);
+      color: var(--cream-dim);
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: .82rem; font-weight: 500;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all var(--trans);
+    }
+    .tab-btn:hover { border-color: var(--gold); color: var(--cream); }
+    .tab-btn.active { background: var(--gold); border-color: var(--gold); color: var(--ink); font-weight: 700; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+
+    /* 과목 카드 그리드 */
+    .subject-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
+    .subject-card {
+      background: var(--ink-3);
+      border: 1px solid var(--gold-line);
+      border-radius: 8px;
+      padding: 18px 16px;
+      transition: all var(--trans);
+    }
+    .subject-card:hover { border-color: var(--gold); background: var(--gold-dim); }
+    .subject-card h4 { font-size: .88rem; font-weight: 700; margin-bottom: 4px; }
+    .subject-card p { font-size: .73rem; color: var(--cream-faint); }
+
+    /* 선생님 카드 */
+    .teacher-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .teacher-card {
+      background: var(--ink-2);
+      border: 1px solid var(--gold-line);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform var(--trans), border-color var(--trans);
+    }
+    .teacher-card:hover { transform: translateY(-3px); border-color: var(--gold); }
+    .teacher-photo {
+      aspect-ratio: 3/4;
+      background: var(--ink-3);
+      overflow: hidden;
+      position: relative;
+    }
+    .teacher-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .teacher-card:hover .teacher-photo img { transform: scale(1.04); }
+    .teacher-badge {
+      position: absolute; bottom: 10px; left: 10px;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: .65rem; font-weight: 700;
+      padding: 3px 8px; border-radius: 20px;
+      letter-spacing: .5px;
+    }
+    .teacher-info { padding: 16px; }
+    .teacher-info h3 { font-size: .92rem; font-weight: 700; margin-bottom: 4px; }
+    .teacher-info .univ { font-size: .78rem; color: var(--gold); margin-bottom: 6px; }
+    .teacher-info .career { font-size: .73rem; color: var(--cream-faint); }
+    .teacher-stars { color: var(--gold); font-size: .8rem; margin-top: 8px; }
+
+    /* 지역 섹션 */
+    .region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+    .region-card {
+      background: var(--ink-3);
+      border: 1px solid var(--gold-line);
+      border-radius: 8px;
+      padding: 14px 12px;
+      font-size: .82rem;
+      font-weight: 500;
+      text-align: center;
+      transition: all var(--trans);
+      cursor: pointer;
+    }
+    .region-card:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+    /* 후기 */
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .review-card {
+      background: var(--ink-2);
+      border: 1px solid var(--gold-line);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .review-stars { color: var(--gold); font-size: .85rem; margin-bottom: 10px; }
+    .review-text { font-size: .85rem; color: var(--cream-dim); line-height: 1.75; margin-bottom: 16px; }
+    .review-author { display: flex; align-items: center; gap: 10px; }
+    .review-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: var(--ink-3); }
+    .review-name { font-size: .78rem; font-weight: 700; }
+    .review-tag { font-size: .7rem; color: var(--cream-faint); }
+
+    /* CTA 배너 */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--ink-2) 0%, rgba(200,168,75,.12) 100%);
+      border: 1px solid var(--gold-line);
+      border-radius: 16px;
+      padding: 56px 40px;
+      text-align: center;
+    }
+    .cta-banner h2 { font-family: var(--font-ko); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; margin-bottom: 12px; }
+    .cta-banner p { color: var(--cream-dim); font-size: .92rem; margin-bottom: 32px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* 플로팅 버튼 */
+    .floating-btns {
+      position: fixed;
+      bottom: 28px; right: 24px;
+      display: flex; flex-direction: column; gap: 10px;
+      z-index: 200;
+    }
+    .float-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,.4);
+      cursor: pointer;
+      transition: transform var(--trans);
+      border: none;
+    }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-kakao { background: #FEE500; color: #3A1D1D; }
+    .float-call { background: var(--gold); color: var(--ink); }
+
+    /* 푸터 */
+    footer {
+      background: var(--ink-2);
+      border-top: 1px solid var(--gold-line);
+      padding: 48px 5% 32px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 900; color: var(--cream); margin-bottom: 8px; }
+    .footer-logo span { color: var(--gold); }
+    .footer-desc { font-size: .8rem; color: var(--cream-faint); margin-bottom: 24px; line-height: 1.7; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
+    .footer-links a { font-size: .78rem; color: var(--cream-faint); transition: color var(--trans); }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: .72rem; color: var(--cream-faint); border-top: 1px solid var(--gold-line); padding-top: 20px; }
+
+    /* 반응형 */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: block; margin-top: 32px; }
+      .nav { gap: 14px; }
+      .nav a:not(.nav-cta) { display: none; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 56px 5%; }
+      .hero { padding: 56px 5%; min-height: auto; }
+      .hero-title { font-size: 2rem; }
+    }
+
+    /* 알림 배너 */
+    .notice-bar {
+      background: var(--gold);
+      color: var(--ink);
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 9px 5%;
+      letter-spacing: .3px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 알림 배너 -->
+<div class="notice-bar">🎓 지금 상담 신청 시 수업료 견적 무료 제공 · 대학생 과외 없음 · 경력 전문 교사만 매칭</div>
+
+<!-- 상단 네비 -->
+<header class="topbar">
+  <div class="logo">티처스<span>.</span> <small style="font-size:.65em;font-weight:400;letter-spacing:1px;color:var(--cream-faint);">Teachus</small></div>
+  <nav class="nav">
+    <a href="#services">서비스</a>
+    <a href="#subjects">과목</a>
+    <a href="#teachers">선생님</a>
+    <a href="#regions">지역</a>
+    <a href="#reviews">후기</a>
+    <a href="tel:01055516230" class="nav-cta">📞 무료 상담</a>
+  </nav>
+</header>
+
+<!-- 히어로 -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow">대학생 과외 없음 · 경력 전문 교사만</p>
+      <h1 class="hero-title">
+        대한민국 최고의<br>
+        <em>1:1 맞춤 과외</em><br>
+        매칭 플랫폼
+      </h1>
+      <p class="hero-desc">
+        명문대 전공 출신 경력 교사와 직접 연결됩니다.<br>
+        방문과외·화상과외·수능·내신·경시대회·입시컨설팅·성인회화까지<br>
+        전국 어디서나, 내 아이에게 딱 맞는 선생님을 찾아드립니다.
+      </p>
+      <div class="hero-btns">
+        <a href="https://pf.kakao.com/_RxnbXX/friend" target="_blank" class="btn-primary">💬 카카오톡 무료 상담</a>
+        <a href="tel:01055516230" class="btn-secondary">📞 010-5551-6230</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <p class="hero-card-title">📋 빠른 과외 신청</p>
+      <div class="hero-form-row">
+        <label>과외 유형</label>
+        <select>
+          <option>방문과외</option>
+          <option>화상과외</option>
+          <option>입시컨설팅</option>
+          <option>성인 회화</option>
+        </select>
+      </div>
+      <div class="hero-form-row">
+        <label>학년</label>
+        <select>
+          <option>초등학교</option>
+          <option>중학교</option>
+          <option>고등학교 (수능)</option>
+          <option>성인</option>
+        </select>
+      </div>
+      <div class="hero-form-row">
+        <label>과목</label>
+        <select>
+          <option>수학</option>
+          <option>영어</option>
+          <option>국어</option>
+          <option>과학</option>
+          <option>사회</option>
+          <option>코딩</option>
+          <option>일본어</option>
+          <option>중국어</option>
+        </select>
+      </div>
+      <div class="hero-form-row">
+        <label>연락처</label>
+        <input type="tel" placeholder="010-0000-0000">
+      </div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHTrhJdxlUpWUL40KFJkSX7Rye1EE2NA_6o4zhjZBGKXIV_A/viewform?usp=publish-editor" target="_blank" class="btn-primary">📋 무료 상담 신청 →</a>
+      <p class="hero-note">✓ 24시간 이내 매칭 · ✓ 상담 완전 무료</p>
+    </div>
+  </div>
+</section>
+
+<!-- 통계 -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num" data-target="2400" data-suffix="+">0</div><div class="stat-label">등록 전문 교사</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="15000" data-suffix="+">0</div><div class="stat-label">누적 매칭 건수</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="4.9" data-suffix="★" data-decimal="1">0</div><div class="stat-label">평균 만족도</div></div>
+    <div class="stat-item"><div class="stat-num">전국</div><div class="stat-label">17개 시도 전지역</div></div>
+    <div class="stat-item"><div class="stat-num">0원</div><div class="stat-label">상담·매칭 수수료</div></div>
+  </div>
+</div>
+
+<!-- 서비스 -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <p class="section-eyebrow">Services</p>
+    <h2 class="section-title">티처스가 제공하는 서비스</h2>
+    <div class="divider"></div>
+    <div class="service-grid">
+      <a href="/services/방문과외.html" class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>방문과외</h3>
+        <p>경력 전문 교사가 직접 집으로 방문합니다. 전국 어디든 가능합니다.</p>
+      </a>
+      <a href="/services/화상과외.html" class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>화상과외</h3>
+        <p>장소 제약 없이 최고의 선생님과 1:1 온라인 수업을 진행합니다.</p>
+      </a>
+      <a href="/services/수능전과목.html" class="service-card">
+        <div class="service-icon">📚</div>
+        <h3>수능 전과목</h3>
+        <p>국어·수학·영어·탐구 전 영역 수능 전문 교사 매칭.</p>
+      </a>
+      <a href="/services/내신관리.html" class="service-card">
+        <div class="service-icon">📝</div>
+        <h3>내신 관리</h3>
+        <p>학교 내신·수행평가·학교시험 완벽 대비.</p>
+      </a>
+      <a href="/services/경시대회.html" class="service-card">
+        <div class="service-icon">🏆</div>
+        <h3>경시대회 대비</h3>
+        <p>KMO·수학올림피아드·과학올림피아드·영재교육원 전문 지도.</p>
+      </a>
+      <a href="/services/입시컨설팅.html" class="service-card">
+        <div class="service-icon">🎓</div>
+        <h3>입시컨설팅</h3>
+        <p>학군지 입시·특목고·대입 전략 전문 컨설팅.</p>
+      </a>
+      <a href="/services/성인영어.html" class="service-card">
+        <div class="service-icon">🌍</div>
+        <h3>성인 영어 회화</h3>
+        <p>비즈니스·CEO·승무원면접·OPIc·번역 특화 영어.</p>
+      </a>
+      <a href="/services/일본어.html" class="service-card">
+        <div class="service-icon">🇯🇵</div>
+        <h3>일본어 회화</h3>
+        <p>JLPT N1~N5·JPT·BJT·외고 내신·생활 회화.</p>
+      </a>
+      <a href="/services/중국어.html" class="service-card">
+        <div class="service-icon">🇨🇳</div>
+        <h3>중국어 회화</h3>
+        <p>HSK 1~6·HSKK·BCT·외고 내신·비즈니스 중국어.</p>
+      </a>
+      <a href="/services/학원연계.html" class="service-card">
+        <div class="service-icon">🏫</div>
+        <h3>학원 연계</h3>
+        <p>전국 학군지 우수 학원 추천·연계 서비스.</p>
+      </a>
+      <a href="/services/코딩.html" class="service-card">
+        <div class="service-icon">💻</div>
+        <h3>코딩·SW</h3>
+        <p>파이썬·앱개발·정보올림피아드·코딩 전문 교사.</p>
+      </a>
+      <a href="/services/검정고시.html" class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>검정고시</h3>
+        <p>초졸·중졸·고졸 검정고시 전문 지도 및 대입 준비.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 과목 -->
+<section class="section" id="subjects" style="background:var(--ink-2);">
+  <div class="section-inner">
+    <p class="section-eyebrow">Subjects</p>
+    <h2 class="section-title">전 과목 전문 교사 매칭</h2>
+    <div class="divider"></div>
+
+    <div class="tabs-wrap" id="subjectTabs">
+      <button class="tab-btn active" onclick="showTab('subjectTabs','tab-school','subjectTabs')">초·중·고 전과목</button>
+      <button class="tab-btn" onclick="showTab('subjectTabs','tab-suneung','subjectTabs')">수능 대비</button>
+      <button class="tab-btn" onclick="showTab('subjectTabs','tab-contest','subjectTabs')">경시대회</button>
+      <button class="tab-btn" onclick="showTab('subjectTabs','tab-adult','subjectTabs')">성인 어학</button>
+      <button class="tab-btn" onclick="showTab('subjectTabs','tab-special','subjectTabs')">특목고·입시</button>
+      <button class="tab-btn" onclick="showTab('subjectTabs','tab-essay','subjectTabs')">논술</button>
+    </div>
+
+    <div id="tab-school" class="tab-pane active">
+      <div class="subject-grid">
+        <div class="subject-card"><h4>수학</h4><p>연산·대수·기하·확통</p></div>
+        <div class="subject-card"><h4>영어</h4><p>문법·독해·회화·작문</p></div>
+        <div class="subject-card"><h4>국어</h4><p>독해·문학·문법·논술</p></div>
+        <div class="subject-card"><h4>과학</h4><p>물리·화학·생물·지구과학</p></div>
+        <div class="subject-card"><h4>사회</h4><p>역사·지리·일반사회</p></div>
+        <div class="subject-card"><h4>코딩</h4><p>파이썬·앱·정보올림피아드</p></div>
+        <div class="subject-card"><h4>일본어</h4><p>회화·JLPT·외고내신</p></div>
+        <div class="subject-card"><h4>중국어</h4><p>회화·HSK·외고내신</p></div>
+        <div class="subject-card"><h4>한국사</h4><p>수능·내신·한능검</p></div>
+        <div class="subject-card"><h4>제2외국어</h4><p>프랑스어·스페인어·독어</p></div>
+      </div>
+    </div>
+
+    <div id="tab-suneung" class="tab-pane">
+      <div class="subject-grid">
+        <div class="subject-card"><h4>수능 국어</h4><p>독서·문학·화작·언매</p></div>
+        <div class="subject-card"><h4>수능 수학</h4><p>수1·수2·미적·기하·확통</p></div>
+        <div class="subject-card"><h4>수능 영어</h4><p>독해·듣기·EBS연계</p></div>
+        <div class="subject-card"><h4>수능 물리</h4><p>물리학1·2 전문</p></div>
+        <div class="subject-card"><h4>수능 화학</h4><p>화학1·2 전문</p></div>
+        <div class="subject-card"><h4>수능 생물</h4><p>생명과학1·2 전문</p></div>
+        <div class="subject-card"><h4>수능 지구과학</h4><p>지구과학1·2 전문</p></div>
+        <div class="subject-card"><h4>수능 한국사</h4><p>필수 한국사 전문</p></div>
+        <div class="subject-card"><h4>수능 사탐</h4><p>생윤·사문·한지·세지</p></div>
+        <div class="subject-card"><h4>N수생 전문</h4><p>재수·삼수 집중 관리</p></div>
+      </div>
+    </div>
+
+    <div id="tab-contest" class="tab-pane">
+      <div class="subject-grid">
+        <div class="subject-card"><h4>KMO</h4><p>한국수학올림피아드</p></div>
+        <div class="subject-card"><h4>수학경시</h4><p>AMC·AIME·전국수학</p></div>
+        <div class="subject-card"><h4>과학올림피아드</h4><p>물리·화학·생물·지구</p></div>
+        <div class="subject-card"><h4>정보올림피아드</h4><p>KOI·알고리즘</p></div>
+        <div class="subject-card"><h4>영재교육원</h4><p>교육청·대학부설 대비</p></div>
+        <div class="subject-card"><h4>영어경시</h4><p>영어말하기·에세이</p></div>
+      </div>
+    </div>
+
+    <div id="tab-adult" class="tab-pane">
+      <div class="tabs-wrap" id="adultTabs" style="margin-bottom:20px;">
+        <button class="tab-btn active" onclick="showSubTab('adultTabs','adult-english')">영어</button>
+        <button class="tab-btn" onclick="showSubTab('adultTabs','adult-japanese')">일본어</button>
+        <button class="tab-btn" onclick="showSubTab('adultTabs','adult-chinese')">중국어</button>
+        <button class="tab-btn" onclick="showSubTab('adultTabs','adult-study-abroad')">유학 대비</button>
+      </div>
+      <div id="adult-english" class="tab-pane active">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>비즈니스 영어</h4><p>CEO·임원·직장인</p></div>
+          <div class="subject-card"><h4>승무원 영어</h4><p>항공사 면접 전문</p></div>
+          <div class="subject-card"><h4>OPIc</h4><p>AL 목표 전문 지도</p></div>
+          <div class="subject-card"><h4>번역·통역</h4><p>영한·한영 전문</p></div>
+          <div class="subject-card"><h4>영어 회화</h4><p>생활·여행·일상</p></div>
+          <div class="subject-card"><h4>영어 작문</h4><p>이메일·보고서·에세이</p></div>
+        </div>
+      </div>
+      <div id="adult-japanese" class="tab-pane">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>JLPT N1~N5</h4><p>일본어능력시험</p></div>
+          <div class="subject-card"><h4>JPT·BJT</h4><p>일본어 전문 자격증</p></div>
+          <div class="subject-card"><h4>일본어 회화</h4><p>생활·여행·비즈니스</p></div>
+          <div class="subject-card"><h4>JLCT</h4><p>일본어 검정시험</p></div>
+        </div>
+      </div>
+      <div id="adult-chinese" class="tab-pane">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>HSK 1~6급</h4><p>중국어 전문</p></div>
+          <div class="subject-card"><h4>BCT·TSC</h4><p>비즈니스 중국어</p></div>
+          <div class="subject-card"><h4>HSKK</h4><p>중국어 말하기 시험</p></div>
+          <div class="subject-card"><h4>중국어 회화</h4><p>생활·비즈니스</p></div>
+        </div>
+      </div>
+      <div id="adult-study-abroad" class="tab-pane">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>TOEFL</h4><p>미국·캐나다 유학 필수</p></div>
+          <div class="subject-card"><h4>IELTS</h4><p>영국·호주·캐나다 유학</p></div>
+          <div class="subject-card"><h4>SAT·ACT</h4><p>미국 대입 시험 전문</p></div>
+          <div class="subject-card"><h4>GRE·GMAT</h4><p>대학원·MBA 유학</p></div>
+          <div class="subject-card"><h4>유학 에세이</h4><p>SOP·PS·자기소개서</p></div>
+          <div class="subject-card"><h4>일본 유학</h4><p>EJU·일본 대학 입시</p></div>
+          <div class="subject-card"><h4>중국 유학</h4><p>HSK·중국 대학 입시</p></div>
+          <div class="subject-card"><h4>유학 인터뷰</h4><p>영어 면접 전문 준비</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-special" class="tab-pane">
+      <div class="tabs-wrap" id="specialTabs" style="margin-bottom:20px;">
+        <button class="tab-btn active" onclick="showSubTab('specialTabs','sp-foreign')">외고 입시</button>
+        <button class="tab-btn" onclick="showSubTab('specialTabs','sp-science')">과학고 입시</button>
+        <button class="tab-btn" onclick="showSubTab('specialTabs','sp-jasa')">자사고 입시</button>
+        <button class="tab-btn" onclick="showSubTab('specialTabs','sp-consult')">입시컨설팅</button>
+      </div>
+
+      <div id="sp-foreign" class="tab-pane active">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>외고 영어과</h4><p>내신·수행평가·영작</p></div>
+          <div class="subject-card"><h4>외고 중국어과</h4><p>내신·HSK·회화</p></div>
+          <div class="subject-card"><h4>외고 일본어과</h4><p>내신·JLPT·회화</p></div>
+          <div class="subject-card"><h4>외고 스페인어과</h4><p>내신·DELE·회화</p></div>
+          <div class="subject-card"><h4>외고 자기소개서</h4><p>합격 자소서 전문 지도</p></div>
+          <div class="subject-card"><h4>외고 면접</h4><p>구술·영어 면접 대비</p></div>
+        </div>
+      </div>
+
+      <div id="sp-science" class="tab-pane">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>수학 심화</h4><p>KMO·경시 수준 대비</p></div>
+          <div class="subject-card"><h4>과학 심화</h4><p>물리·화학·생물 올림피아드</p></div>
+          <div class="subject-card"><h4>과학고 자기소개서</h4><p>연구활동·실적 중심</p></div>
+          <div class="subject-card"><h4>과학고 면접</h4><p>구술·수학과학 심층 면접</p></div>
+        </div>
+      </div>
+
+      <div id="sp-jasa" class="tab-pane">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>자사고 내신</h4><p>전과목 내신 관리</p></div>
+          <div class="subject-card"><h4>자기소개서</h4><p>학교별 맞춤 자소서 작성</p></div>
+          <div class="subject-card"><h4>면접 대비</h4><p>구술·인성 면접 전문 준비</p></div>
+          <div class="subject-card"><h4>생기부 관리</h4><p>학생부 종합 전략 설계</p></div>
+        </div>
+      </div>
+
+      <div id="sp-consult" class="tab-pane">
+        <div class="subject-grid">
+          <div class="subject-card"><h4>고입 종합 컨설팅</h4><p>외고·과학고·자사고 입시 전략</p></div>
+          <div class="subject-card"><h4>대입 종합 컨설팅</h4><p>수시·정시·논술 전략 설계</p></div>
+          <div class="subject-card"><h4>학군지 입시컨설팅</h4><p>대치·목동·분당·평촌</p></div>
+          <div class="subject-card"><h4>학생부 종합 관리</h4><p>생기부·비교과 전략</p></div>
+          <div class="subject-card"><h4>의치한 입시</h4><p>의대·치대·한의대 전문</p></div>
+          <div class="subject-card"><h4>편입 컨설팅</h4><p>대학 편입 전략·영어</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-essay" class="tab-pane">
+      <div class="subject-grid">
+        <div class="subject-card"><h4>수리논술</h4><p>연세·고려·성균관 등</p></div>
+        <div class="subject-card"><h4>인문논술</h4><p>사회·철학·경제 논술</p></div>
+        <div class="subject-card"><h4>의치한 논술</h4><p>의대 면접·논술</p></div>
+        <div class="subject-card"><h4>소논문</h4><p>R&E·연구 보고서</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 방문과외 이미지 배너 -->
+<section style="position:relative;overflow:hidden;min-height:340px;display:flex;align-items:center;justify-content:center;">
+  <div style="position:absolute;inset:0;background:url('/bg2.jpg') center center / cover no-repeat;"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(12,12,13,0.88) 0%,rgba(12,12,13,0.65) 50%,rgba(12,12,13,0.85) 100%);"></div>
+  <div style="position:relative;z-index:2;text-align:center;padding:60px 5%;max-width:800px;margin:0 auto;">
+    <p style="font-size:.72rem;font-weight:700;letter-spacing:2.5px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;">1:1 방문과외 · 전국 어디든</p>
+    <h2 style="font-family:'Noto Serif KR',serif;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;color:#f2ece0;line-height:1.3;margin-bottom:20px;">경력 전문 교사가<br><span style="color:var(--gold);">직접 찾아갑니다</span></h2>
+    <p style="font-size:.95rem;color:rgba(242,236,224,.75);margin-bottom:32px;line-height:1.85;">대학생 과외 없음 · 명문대 전공 출신 경력 교사만 · 전국 방문과외·화상과외 모두 가능</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHTrhJdxlUpWUL40KFJkSX7Rye1EE2NA_6o4zhjZBGKXIV_A/viewform?usp=publish-editor" target="_blank" style="background:var(--gold);color:#0c0c0d;font-weight:700;font-size:.92rem;padding:14px 32px;border-radius:6px;display:inline-flex;align-items:center;gap:8px;">📋 무료 상담 신청</a>
+  </div>
+</section>
+
+<!-- 선생님 -->
+<section class="section" id="teachers">
+  <div class="section-inner">
+    <p class="section-eyebrow">Teachers</p>
+    <h2 class="section-title">경력 전문 교사를 만나보세요</h2>
+    <p class="section-sub">티처스는 대학생 과외가 없습니다. 모든 선생님은 명문대 전공 출신 경력 교사입니다.</p>
+    <div class="teacher-grid">
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher1.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">수학·경시</span>
+        </div>
+        <div class="teacher-info">
+          <h3>김○○ 선생님</h3>
+          <div class="univ">서울대학교 수학교육과</div>
+          <div class="career">수능 수학 10년 경력 · KMO 지도</div>
+          <div class="teacher-stars">★★★★★ 5.0</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher2.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">영어·수능</span>
+        </div>
+        <div class="teacher-info">
+          <h3>이○○ 선생님</h3>
+          <div class="univ">연세대학교 영어영문학과</div>
+          <div class="career">수능 영어 8년 · 비즈니스 영어</div>
+          <div class="teacher-stars">★★★★★ 4.9</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher3.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">국어·논술</span>
+        </div>
+        <div class="teacher-info">
+          <h3>박○○ 선생님</h3>
+          <div class="univ">고려대학교 국어국문학과</div>
+          <div class="career">수능 국어 12년 · 논술 전문</div>
+          <div class="teacher-stars">★★★★★ 5.0</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher4.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">과학·입시</span>
+        </div>
+        <div class="teacher-info">
+          <h3>최○○ 선생님</h3>
+          <div class="univ">KAIST 물리학과</div>
+          <div class="career">과학고 입시 · 물리올림피아드</div>
+          <div class="teacher-stars">★★★★★ 4.9</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher5.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">사회·한국사</span>
+        </div>
+        <div class="teacher-info">
+          <h3>정○○ 선생님</h3>
+          <div class="univ">서울대학교 사회교육과</div>
+          <div class="career">수능 사탐 9년 · 한국사능력검정</div>
+          <div class="teacher-stars">★★★★★ 4.9</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher6.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">코딩·SW</span>
+        </div>
+        <div class="teacher-info">
+          <h3>윤○○ 선생님</h3>
+          <div class="univ">KAIST 전산학과</div>
+          <div class="career">파이썬·앱개발 7년 · 정보올림피아드</div>
+          <div class="teacher-stars">★★★★★ 5.0</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher7.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">입시컨설팅</span>
+        </div>
+        <div class="teacher-info">
+          <h3>한○○ 선생님</h3>
+          <div class="univ">연세대학교 교육학과</div>
+          <div class="career">대입 컨설팅 15년 · 특목고 입시</div>
+          <div class="teacher-stars">★★★★★ 5.0</div>
+        </div>
+      </div>
+      <div class="teacher-card">
+        <div class="teacher-photo">
+          <img src="/teachers/teacher8.jpg" alt="티처스 전문 교사" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+          <span class="teacher-badge">검정고시</span>
+        </div>
+        <div class="teacher-info">
+          <h3>오○○ 선생님</h3>
+          <div class="univ">고려대학교 교육학과</div>
+          <div class="career">검정고시 전문 11년 · 고졸 합격률 98%</div>
+          <div class="teacher-stars">★★★★★ 5.0</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="https://pf.kakao.com/_RxnbXX/friend" target="_blank" class="btn-primary">전체 선생님 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 지역 -->
+<section class="section" id="regions" style="background:var(--ink-2);">
+  <div class="section-inner">
+    <p class="section-eyebrow">Regions</p>
+    <h2 class="section-title">전국 어디서나 티처스</h2>
+    <p class="section-sub">서울·경기부터 제주까지 전국 17개 시도, 시군구·동 단위까지 매칭 가능합니다.</p>
+    <div class="divider"></div>
+
+    <div class="tabs-wrap" id="regionTabs" style="gap:6px;">
+      <button class="tab-btn active" onclick="showTab('regionTabs','r-seoul')">서울</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-gyeonggi')">경기</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-incheon')">인천</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-busan')">부산</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-daegu')">대구</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-daejeon')">대전</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-gwangju')">광주</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-ulsan')">울산</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-sejong')">세종</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-gangwon')">강원</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-chungbuk')">충북</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-chungnam')">충남</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-jeonbuk')">전북</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-jeonnam')">전남</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-gyeongbuk')">경북</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-gyeongnam')">경남</button>
+      <button class="tab-btn" onclick="showTab('regionTabs','r-jeju')">제주</button>
+    </div>
+
+    <!-- 서울 -->
+    <div id="r-seoul" class="tab-pane active">
+      <!-- 구 선택 -->
+      <div class="region-grid" id="seoul-gu-grid">
+        <div class="region-card" onclick="showDong('강남구')">강남구 과외</div>
+        <div class="region-card" onclick="showDong('강동구')">강동구 과외</div>
+        <div class="region-card" onclick="showDong('강북구')">강북구 과외</div>
+        <div class="region-card" onclick="showDong('강서구')">강서구 과외</div>
+        <div class="region-card" onclick="showDong('관악구')">관악구 과외</div>
+        <div class="region-card" onclick="showDong('광진구')">광진구 과외</div>
+        <div class="region-card" onclick="showDong('구로구')">구로구 과외</div>
+        <div class="region-card" onclick="showDong('금천구')">금천구 과외</div>
+        <div class="region-card" onclick="showDong('노원구')">노원구 과외</div>
+        <div class="region-card" onclick="showDong('도봉구')">도봉구 과외</div>
+        <div class="region-card" onclick="showDong('동대문구')">동대문구 과외</div>
+        <div class="region-card" onclick="showDong('동작구')">동작구 과외</div>
+        <div class="region-card" onclick="showDong('마포구')">마포구 과외</div>
+        <div class="region-card" onclick="showDong('서대문구')">서대문구 과외</div>
+        <div class="region-card" onclick="showDong('서초구')">서초구 과외</div>
+        <div class="region-card" onclick="showDong('성동구')">성동구 과외</div>
+        <div class="region-card" onclick="showDong('성북구')">성북구 과외</div>
+        <div class="region-card" onclick="showDong('송파구')">송파구 과외</div>
+        <div class="region-card" onclick="showDong('양천구')">양천구 과외</div>
+        <div class="region-card" onclick="showDong('영등포구')">영등포구 과외</div>
+        <div class="region-card" onclick="showDong('용산구')">용산구 과외</div>
+        <div class="region-card" onclick="showDong('은평구')">은평구 과외</div>
+        <div class="region-card" onclick="showDong('종로구')">종로구 과외</div>
+        <div class="region-card" onclick="showDong('중구')">중구 과외</div>
+        <div class="region-card" onclick="showDong('중랑구')">중랑구 과외</div>
+      </div>
+
+      <!-- 동 목록 (클릭시 표시) -->
+      <div id="dong-list" style="display:none; margin-top:20px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+          <span id="dong-title" style="font-family:'Noto Serif KR',serif; font-size:1rem; font-weight:700; color:var(--gold);"></span>
+          <button onclick="hideDong()" style="background:transparent;border:1px solid var(--gold-line);color:var(--cream-faint);padding:4px 12px;border-radius:20px;font-size:.75rem;cursor:pointer;">← 구 목록으로</button>
+        </div>
+        <div id="dong-grid" class="region-grid"></div>
+      </div>
+    </div>
+
+    <!-- 경기 -->
+    <div id="r-gyeonggi" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/경기-수원시-장안구-과외.html" class="region-card" style="text-align:center;">수원시 장안구 과외</a>
+        <a href="/pages/경기-수원시-권선구-과외.html" class="region-card" style="text-align:center;">수원시 권선구 과외</a>
+        <a href="/pages/경기-수원시-팔달구-과외.html" class="region-card" style="text-align:center;">수원시 팔달구 과외</a>
+        <a href="/pages/경기-수원시-영통구-과외.html" class="region-card" style="text-align:center;">수원시 영통구 과외</a>
+        <a href="/pages/경기-성남시-수정구-과외.html" class="region-card" style="text-align:center;">성남시 수정구 과외</a>
+        <a href="/pages/경기-성남시-중원구-과외.html" class="region-card" style="text-align:center;">성남시 중원구 과외</a>
+        <a href="/pages/경기-성남시-분당구-과외.html" class="region-card" style="text-align:center;">성남시 분당구 과외</a>
+        <a href="/pages/경기-의정부시-과외.html" class="region-card" style="text-align:center;">의정부시 과외</a>
+        <a href="/pages/경기-안양시-만안구-과외.html" class="region-card" style="text-align:center;">안양시 만안구 과외</a>
+        <a href="/pages/경기-안양시-동안구-과외.html" class="region-card" style="text-align:center;">안양시 동안구 과외</a>
+        <a href="/pages/경기-안양시-동안구-과외.html" class="region-card" style="text-align:center;">평촌 과외</a>
+        <a href="/pages/경기-부천시-원미구-과외.html" class="region-card" style="text-align:center;">부천시 원미구 과외</a>
+        <a href="/pages/경기-부천시-소사구-과외.html" class="region-card" style="text-align:center;">부천시 소사구 과외</a>
+        <a href="/pages/경기-부천시-오정구-과외.html" class="region-card" style="text-align:center;">부천시 오정구 과외</a>
+        <a href="/pages/경기-광명시-과외.html" class="region-card" style="text-align:center;">광명시 과외</a>
+        <a href="/pages/경기-평택시-과외.html" class="region-card" style="text-align:center;">평택시 과외</a>
+        <a href="/pages/경기-동두천시-과외.html" class="region-card" style="text-align:center;">동두천시 과외</a>
+        <a href="/pages/경기-안산시-상록구-과외.html" class="region-card" style="text-align:center;">안산시 상록구 과외</a>
+        <a href="/pages/경기-안산시-단원구-과외.html" class="region-card" style="text-align:center;">안산시 단원구 과외</a>
+        <a href="/pages/경기-고양시-일산동구-과외.html" class="region-card" style="text-align:center;">고양시 일산동구 과외</a>
+        <a href="/pages/경기-고양시-일산서구-과외.html" class="region-card" style="text-align:center;">고양시 일산서구 과외</a>
+        <a href="/pages/경기-고양시-덕양구-과외.html" class="region-card" style="text-align:center;">고양시 덕양구 과외</a>
+        <a href="/pages/경기-과천시-과외.html" class="region-card" style="text-align:center;">과천시 과외</a>
+        <a href="/pages/경기-구리시-과외.html" class="region-card" style="text-align:center;">구리시 과외</a>
+        <a href="/pages/경기-남양주시-과외.html" class="region-card" style="text-align:center;">남양주시 과외</a>
+        <a href="/pages/경기-오산시-과외.html" class="region-card" style="text-align:center;">오산시 과외</a>
+        <a href="/pages/경기-시흥시-과외.html" class="region-card" style="text-align:center;">시흥시 과외</a>
+        <a href="/pages/경기-군포시-과외.html" class="region-card" style="text-align:center;">군포시 과외</a>
+        <a href="/pages/경기-의왕시-과외.html" class="region-card" style="text-align:center;">의왕시 과외</a>
+        <a href="/pages/경기-하남시-과외.html" class="region-card" style="text-align:center;">하남시 과외</a>
+        <a href="/pages/경기-용인시-처인구-과외.html" class="region-card" style="text-align:center;">용인시 처인구 과외</a>
+        <a href="/pages/경기-용인시-기흥구-과외.html" class="region-card" style="text-align:center;">용인시 기흥구 과외</a>
+        <a href="/pages/경기-용인시-수지구-과외.html" class="region-card" style="text-align:center;">용인시 수지구 과외</a>
+        <a href="/pages/경기-파주시-과외.html" class="region-card" style="text-align:center;">파주시 과외</a>
+        <a href="/pages/경기-이천시-과외.html" class="region-card" style="text-align:center;">이천시 과외</a>
+        <a href="/pages/경기-안성시-과외.html" class="region-card" style="text-align:center;">안성시 과외</a>
+        <a href="/pages/경기-김포시-과외.html" class="region-card" style="text-align:center;">김포시 과외</a>
+        <a href="/pages/경기-화성시-과외.html" class="region-card" style="text-align:center;">화성시 만세구 과외</a>
+        <a href="/pages/경기-화성시-과외.html" class="region-card" style="text-align:center;">화성시 효행구 과외</a>
+        <a href="/pages/경기-화성시-과외.html" class="region-card" style="text-align:center;">화성시 병점구 과외</a>
+        <a href="/pages/경기-화성시-과외.html" class="region-card" style="text-align:center;">화성시 동탄구 과외</a>
+        <a href="/pages/경기-광주시-과외.html" class="region-card" style="text-align:center;">광주시 과외</a>
+        <a href="/pages/경기-양주시-과외.html" class="region-card" style="text-align:center;">양주시 과외</a>
+        <a href="/pages/경기-포천시-과외.html" class="region-card" style="text-align:center;">포천시 과외</a>
+        <a href="/pages/경기-여주시-과외.html" class="region-card" style="text-align:center;">여주시 과외</a>
+        <a href="/pages/경기-연천군-과외.html" class="region-card" style="text-align:center;">연천군 과외</a>
+        <a href="/pages/경기-가평군-과외.html" class="region-card" style="text-align:center;">가평군 과외</a>
+        <a href="/pages/경기-양평군-과외.html" class="region-card" style="text-align:center;">양평군 과외</a>
+      </div>
+    </div>
+
+    <!-- 인천 -->
+    <div id="r-incheon" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/인천-중구-과외.html" class="region-card" style="text-align:center;">중구 과외</a>
+        <a href="/pages/인천-동구-과외.html" class="region-card" style="text-align:center;">동구 과외</a>
+        <a href="/pages/인천-미추홀구-과외.html" class="region-card" style="text-align:center;">미추홀구 과외</a>
+        <a href="/pages/인천-연수구-과외.html" class="region-card" style="text-align:center;">연수구 과외</a>
+        <a href="/pages/인천-연수구-과외.html" class="region-card" style="text-align:center;">송도 과외</a>
+        <a href="/pages/인천-남동구-과외.html" class="region-card" style="text-align:center;">남동구 과외</a>
+        <a href="/pages/인천-부평구-과외.html" class="region-card" style="text-align:center;">부평구 과외</a>
+        <a href="/pages/인천-계양구-과외.html" class="region-card" style="text-align:center;">계양구 과외</a>
+        <a href="/pages/인천-서구-과외.html" class="region-card" style="text-align:center;">서구 과외</a>
+        <a href="/pages/인천-강화군-과외.html" class="region-card" style="text-align:center;">강화군 과외</a>
+        <a href="/pages/인천-옹진군-과외.html" class="region-card" style="text-align:center;">옹진군 과외</a>
+      </div>
+    </div>
+
+    <!-- 부산 -->
+    <div id="r-busan" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/인천-중구-과외.html" class="region-card" style="text-align:center;">중구 과외</a>
+        <a href="/pages/인천-서구-과외.html" class="region-card" style="text-align:center;">서구 과외</a>
+        <a href="/pages/인천-동구-과외.html" class="region-card" style="text-align:center;">동구 과외</a>
+        <a href="/pages/부산-영도구-과외.html" class="region-card" style="text-align:center;">영도구 과외</a>
+        <a href="/pages/부산-부산진구-과외.html" class="region-card" style="text-align:center;">부산진구 과외</a>
+        <a href="/pages/부산-동래구-과외.html" class="region-card" style="text-align:center;">동래구 과외</a>
+        <a href="/pages/부산-남구-과외.html" class="region-card" style="text-align:center;">남구 과외</a>
+        <a href="/pages/부산-북구-과외.html" class="region-card" style="text-align:center;">북구 과외</a>
+        <a href="/pages/부산-해운대구-과외.html" class="region-card" style="text-align:center;">해운대구 과외</a>
+        <a href="/pages/부산-사하구-과외.html" class="region-card" style="text-align:center;">사하구 과외</a>
+        <a href="/pages/부산-금정구-과외.html" class="region-card" style="text-align:center;">금정구 과외</a>
+        <a href="/pages/부산-강서구-과외.html" class="region-card" style="text-align:center;">강서구 과외</a>
+        <a href="/pages/부산-연제구-과외.html" class="region-card" style="text-align:center;">연제구 과외</a>
+        <a href="/pages/부산-수영구-과외.html" class="region-card" style="text-align:center;">수영구 과외</a>
+        <a href="/pages/부산-사상구-과외.html" class="region-card" style="text-align:center;">사상구 과외</a>
+        <a href="/pages/부산-기장군-과외.html" class="region-card" style="text-align:center;">기장군 과외</a>
+      </div>
+    </div>
+
+    <!-- 대구 -->
+    <div id="r-daegu" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/인천-중구-과외.html" class="region-card" style="text-align:center;">중구 과외</a>
+        <a href="/pages/인천-동구-과외.html" class="region-card" style="text-align:center;">동구 과외</a>
+        <a href="/pages/인천-서구-과외.html" class="region-card" style="text-align:center;">서구 과외</a>
+        <a href="/pages/부산-남구-과외.html" class="region-card" style="text-align:center;">남구 과외</a>
+        <a href="/pages/부산-북구-과외.html" class="region-card" style="text-align:center;">북구 과외</a>
+        <a href="/pages/대구-수성구-과외.html" class="region-card" style="text-align:center;">수성구 과외</a>
+        <a href="/pages/대구-달서구-과외.html" class="region-card" style="text-align:center;">달서구 과외</a>
+        <a href="/pages/대구-달성군-과외.html" class="region-card" style="text-align:center;">달성군 과외</a>
+        <a href="/pages/대구-군위군-과외.html" class="region-card" style="text-align:center;">군위군 과외</a>
+      </div>
+    </div>
+
+    <!-- 대전 -->
+    <div id="r-daejeon" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/인천-동구-과외.html" class="region-card" style="text-align:center;">동구 과외</a>
+        <a href="/pages/인천-중구-과외.html" class="region-card" style="text-align:center;">중구 과외</a>
+        <a href="/pages/인천-서구-과외.html" class="region-card" style="text-align:center;">서구 과외</a>
+        <a href="/pages/대전-유성구-과외.html" class="region-card" style="text-align:center;">유성구 과외</a>
+        <a href="/pages/대전-대덕구-과외.html" class="region-card" style="text-align:center;">대덕구 과외</a>
+      </div>
+    </div>
+
+    <!-- 광주 -->
+    <div id="r-gwangju" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/인천-동구-과외.html" class="region-card" style="text-align:center;">동구 과외</a>
+        <a href="/pages/인천-서구-과외.html" class="region-card" style="text-align:center;">서구 과외</a>
+        <a href="/pages/부산-남구-과외.html" class="region-card" style="text-align:center;">남구 과외</a>
+        <a href="/pages/부산-북구-과외.html" class="region-card" style="text-align:center;">북구 과외</a>
+        <a href="/pages/광주-광산구-과외.html" class="region-card" style="text-align:center;">광산구 과외</a>
+      </div>
+    </div>
+
+    <!-- 울산 -->
+    <div id="r-ulsan" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/인천-중구-과외.html" class="region-card" style="text-align:center;">중구 과외</a>
+        <a href="/pages/부산-남구-과외.html" class="region-card" style="text-align:center;">남구 과외</a>
+        <a href="/pages/인천-동구-과외.html" class="region-card" style="text-align:center;">동구 과외</a>
+        <a href="/pages/부산-북구-과외.html" class="region-card" style="text-align:center;">북구 과외</a>
+        <a href="/pages/울산-울주군-과외.html" class="region-card" style="text-align:center;">울주군 과외</a>
+      </div>
+    </div>
+
+    <!-- 세종 -->
+    <div id="r-sejong" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/세종-세종시-과외.html" class="region-card" style="text-align:center;">세종시 과외</a>
+      </div>
+    </div>
+
+    <!-- 강원 -->
+    <div id="r-gangwon" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/강원-춘천시-과외.html" class="region-card" style="text-align:center;">춘천시 과외</a>
+        <a href="/pages/강원-원주시-과외.html" class="region-card" style="text-align:center;">원주시 과외</a>
+        <a href="/pages/강원-강릉시-과외.html" class="region-card" style="text-align:center;">강릉시 과외</a>
+        <a href="/pages/강원-동해시-과외.html" class="region-card" style="text-align:center;">동해시 과외</a>
+        <a href="/pages/강원-태백시-과외.html" class="region-card" style="text-align:center;">태백시 과외</a>
+        <a href="/pages/강원-속초시-과외.html" class="region-card" style="text-align:center;">속초시 과외</a>
+        <a href="/pages/강원-삼척시-과외.html" class="region-card" style="text-align:center;">삼척시 과외</a>
+        <a href="/pages/강원-홍천군-과외.html" class="region-card" style="text-align:center;">홍천군 과외</a>
+        <a href="/pages/강원-횡성군-과외.html" class="region-card" style="text-align:center;">횡성군 과외</a>
+        <a href="/pages/강원-영월군-과외.html" class="region-card" style="text-align:center;">영월군 과외</a>
+        <a href="/pages/강원-평창군-과외.html" class="region-card" style="text-align:center;">평창군 과외</a>
+        <a href="/pages/강원-정선군-과외.html" class="region-card" style="text-align:center;">정선군 과외</a>
+        <a href="/pages/강원-철원군-과외.html" class="region-card" style="text-align:center;">철원군 과외</a>
+        <a href="/pages/강원-화천군-과외.html" class="region-card" style="text-align:center;">화천군 과외</a>
+        <a href="/pages/강원-양구군-과외.html" class="region-card" style="text-align:center;">양구군 과외</a>
+        <a href="/pages/강원-인제군-과외.html" class="region-card" style="text-align:center;">인제군 과외</a>
+        <a href="/pages/강원-고성군-과외.html" class="region-card" style="text-align:center;">고성군 과외</a>
+        <a href="/pages/강원-양양군-과외.html" class="region-card" style="text-align:center;">양양군 과외</a>
+      </div>
+    </div>
+
+    <!-- 충북 -->
+    <div id="r-chungbuk" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/충북-청주시-상당구-과외.html" class="region-card" style="text-align:center;">청주시 상당구 과외</a>
+        <a href="/pages/충북-청주시-서원구-과외.html" class="region-card" style="text-align:center;">청주시 서원구 과외</a>
+        <a href="/pages/충북-청주시-흥덕구-과외.html" class="region-card" style="text-align:center;">청주시 흥덕구 과외</a>
+        <a href="/pages/충북-청주시-청원구-과외.html" class="region-card" style="text-align:center;">청주시 청원구 과외</a>
+        <a href="/pages/충북-충주시-과외.html" class="region-card" style="text-align:center;">충주시 과외</a>
+        <a href="/pages/충북-제천시-과외.html" class="region-card" style="text-align:center;">제천시 과외</a>
+        <a href="/pages/충북-보은군-과외.html" class="region-card" style="text-align:center;">보은군 과외</a>
+        <a href="/pages/충북-옥천군-과외.html" class="region-card" style="text-align:center;">옥천군 과외</a>
+        <a href="/pages/충북-영동군-과외.html" class="region-card" style="text-align:center;">영동군 과외</a>
+        <a href="/pages/충북-증평군-과외.html" class="region-card" style="text-align:center;">증평군 과외</a>
+        <a href="/pages/충북-진천군-과외.html" class="region-card" style="text-align:center;">진천군 과외</a>
+        <a href="/pages/충북-괴산군-과외.html" class="region-card" style="text-align:center;">괴산군 과외</a>
+        <a href="/pages/충북-음성군-과외.html" class="region-card" style="text-align:center;">음성군 과외</a>
+        <a href="/pages/충북-단양군-과외.html" class="region-card" style="text-align:center;">단양군 과외</a>
+      </div>
+    </div>
+
+    <!-- 충남 -->
+    <div id="r-chungnam" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/충남-천안시-동남구-과외.html" class="region-card" style="text-align:center;">천안시 동남구 과외</a>
+        <a href="/pages/충남-천안시-서북구-과외.html" class="region-card" style="text-align:center;">천안시 서북구 과외</a>
+        <a href="/pages/충남-공주시-과외.html" class="region-card" style="text-align:center;">공주시 과외</a>
+        <a href="/pages/충남-보령시-과외.html" class="region-card" style="text-align:center;">보령시 과외</a>
+        <a href="/pages/충남-아산시-과외.html" class="region-card" style="text-align:center;">아산시 과외</a>
+        <a href="/pages/충남-서산시-과외.html" class="region-card" style="text-align:center;">서산시 과외</a>
+        <a href="/pages/충남-논산시-과외.html" class="region-card" style="text-align:center;">논산시 과외</a>
+        <a href="/pages/충남-계룡시-과외.html" class="region-card" style="text-align:center;">계룡시 과외</a>
+        <a href="/pages/충남-당진시-과외.html" class="region-card" style="text-align:center;">당진시 과외</a>
+        <a href="/pages/충남-금산군-과외.html" class="region-card" style="text-align:center;">금산군 과외</a>
+        <a href="/pages/충남-부여군-과외.html" class="region-card" style="text-align:center;">부여군 과외</a>
+        <a href="/pages/충남-서천군-과외.html" class="region-card" style="text-align:center;">서천군 과외</a>
+        <a href="/pages/충남-청양군-과외.html" class="region-card" style="text-align:center;">청양군 과외</a>
+        <a href="/pages/충남-홍성군-과외.html" class="region-card" style="text-align:center;">홍성군 과외</a>
+        <a href="/pages/충남-예산군-과외.html" class="region-card" style="text-align:center;">예산군 과외</a>
+        <a href="/pages/충남-태안군-과외.html" class="region-card" style="text-align:center;">태안군 과외</a>
+      </div>
+    </div>
+
+    <!-- 전북 -->
+    <div id="r-jeonbuk" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/전북-전주시-완산구-과외.html" class="region-card" style="text-align:center;">전주시 완산구 과외</a>
+        <a href="/pages/전북-전주시-덕진구-과외.html" class="region-card" style="text-align:center;">전주시 덕진구 과외</a>
+        <a href="/pages/전북-군산시-과외.html" class="region-card" style="text-align:center;">군산시 과외</a>
+        <a href="/pages/전북-익산시-과외.html" class="region-card" style="text-align:center;">익산시 과외</a>
+        <a href="/pages/전북-정읍시-과외.html" class="region-card" style="text-align:center;">정읍시 과외</a>
+        <a href="/pages/전북-남원시-과외.html" class="region-card" style="text-align:center;">남원시 과외</a>
+        <a href="/pages/전북-김제시-과외.html" class="region-card" style="text-align:center;">김제시 과외</a>
+        <a href="/pages/전북-완주군-과외.html" class="region-card" style="text-align:center;">완주군 과외</a>
+        <a href="/pages/전북-진안군-과외.html" class="region-card" style="text-align:center;">진안군 과외</a>
+        <a href="/pages/전북-무주군-과외.html" class="region-card" style="text-align:center;">무주군 과외</a>
+        <a href="/pages/전북-장수군-과외.html" class="region-card" style="text-align:center;">장수군 과외</a>
+        <a href="/pages/전북-임실군-과외.html" class="region-card" style="text-align:center;">임실군 과외</a>
+        <a href="/pages/전북-순창군-과외.html" class="region-card" style="text-align:center;">순창군 과외</a>
+        <a href="/pages/전북-고창군-과외.html" class="region-card" style="text-align:center;">고창군 과외</a>
+        <a href="/pages/전북-부안군-과외.html" class="region-card" style="text-align:center;">부안군 과외</a>
+      </div>
+    </div>
+
+    <!-- 전남 -->
+    <div id="r-jeonnam" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/전남-목포시-과외.html" class="region-card" style="text-align:center;">목포시 과외</a>
+        <a href="/pages/전남-여수시-과외.html" class="region-card" style="text-align:center;">여수시 과외</a>
+        <a href="/pages/전남-순천시-과외.html" class="region-card" style="text-align:center;">순천시 과외</a>
+        <a href="/pages/전남-나주시-과외.html" class="region-card" style="text-align:center;">나주시 과외</a>
+        <a href="/pages/전남-광양시-과외.html" class="region-card" style="text-align:center;">광양시 과외</a>
+        <a href="/pages/전남-담양군-과외.html" class="region-card" style="text-align:center;">담양군 과외</a>
+        <a href="/pages/전남-곡성군-과외.html" class="region-card" style="text-align:center;">곡성군 과외</a>
+        <a href="/pages/전남-구례군-과외.html" class="region-card" style="text-align:center;">구례군 과외</a>
+        <a href="/pages/전남-고흥군-과외.html" class="region-card" style="text-align:center;">고흥군 과외</a>
+        <a href="/pages/전남-보성군-과외.html" class="region-card" style="text-align:center;">보성군 과외</a>
+        <a href="/pages/전남-화순군-과외.html" class="region-card" style="text-align:center;">화순군 과외</a>
+        <a href="/pages/전남-장흥군-과외.html" class="region-card" style="text-align:center;">장흥군 과외</a>
+        <a href="/pages/전남-강진군-과외.html" class="region-card" style="text-align:center;">강진군 과외</a>
+        <a href="/pages/전남-해남군-과외.html" class="region-card" style="text-align:center;">해남군 과외</a>
+        <a href="/pages/전남-영암군-과외.html" class="region-card" style="text-align:center;">영암군 과외</a>
+        <a href="/pages/전남-무안군-과외.html" class="region-card" style="text-align:center;">무안군 과외</a>
+        <a href="/pages/전남-함평군-과외.html" class="region-card" style="text-align:center;">함평군 과외</a>
+        <a href="/pages/전남-영광군-과외.html" class="region-card" style="text-align:center;">영광군 과외</a>
+        <a href="/pages/전남-장성군-과외.html" class="region-card" style="text-align:center;">장성군 과외</a>
+        <a href="/pages/전남-완도군-과외.html" class="region-card" style="text-align:center;">완도군 과외</a>
+        <a href="/pages/전남-진도군-과외.html" class="region-card" style="text-align:center;">진도군 과외</a>
+        <a href="/pages/전남-신안군-과외.html" class="region-card" style="text-align:center;">신안군 과외</a>
+      </div>
+    </div>
+
+    <!-- 경북 -->
+    <div id="r-gyeongbuk" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/경북-포항시-남구-과외.html" class="region-card" style="text-align:center;">포항시 남구 과외</a>
+        <a href="/pages/경북-포항시-북구-과외.html" class="region-card" style="text-align:center;">포항시 북구 과외</a>
+        <a href="/pages/경북-경주시-과외.html" class="region-card" style="text-align:center;">경주시 과외</a>
+        <a href="/pages/경북-김천시-과외.html" class="region-card" style="text-align:center;">김천시 과외</a>
+        <a href="/pages/경북-안동시-과외.html" class="region-card" style="text-align:center;">안동시 과외</a>
+        <a href="/pages/경북-구미시-과외.html" class="region-card" style="text-align:center;">구미시 과외</a>
+        <a href="/pages/경북-영주시-과외.html" class="region-card" style="text-align:center;">영주시 과외</a>
+        <a href="/pages/경북-영천시-과외.html" class="region-card" style="text-align:center;">영천시 과외</a>
+        <a href="/pages/경북-상주시-과외.html" class="region-card" style="text-align:center;">상주시 과외</a>
+        <a href="/pages/경북-문경시-과외.html" class="region-card" style="text-align:center;">문경시 과외</a>
+        <a href="/pages/경북-경산시-과외.html" class="region-card" style="text-align:center;">경산시 과외</a>
+        <a href="/pages/경북-의성군-과외.html" class="region-card" style="text-align:center;">의성군 과외</a>
+        <a href="/pages/경북-청송군-과외.html" class="region-card" style="text-align:center;">청송군 과외</a>
+        <a href="/pages/경북-영양군-과외.html" class="region-card" style="text-align:center;">영양군 과외</a>
+        <a href="/pages/경북-영덕군-과외.html" class="region-card" style="text-align:center;">영덕군 과외</a>
+        <a href="/pages/경북-청도군-과외.html" class="region-card" style="text-align:center;">청도군 과외</a>
+        <a href="/pages/경북-고령군-과외.html" class="region-card" style="text-align:center;">고령군 과외</a>
+        <a href="/pages/경북-성주군-과외.html" class="region-card" style="text-align:center;">성주군 과외</a>
+        <a href="/pages/경북-칠곡군-과외.html" class="region-card" style="text-align:center;">칠곡군 과외</a>
+        <a href="/pages/경북-예천군-과외.html" class="region-card" style="text-align:center;">예천군 과외</a>
+        <a href="/pages/경북-봉화군-과외.html" class="region-card" style="text-align:center;">봉화군 과외</a>
+        <a href="/pages/경북-울진군-과외.html" class="region-card" style="text-align:center;">울진군 과외</a>
+        <a href="/pages/경북-울릉군-과외.html" class="region-card" style="text-align:center;">울릉군 과외</a>
+      </div>
+    </div>
+
+    <!-- 경남 -->
+    <div id="r-gyeongnam" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/경남-창원시-의창구-과외.html" class="region-card" style="text-align:center;">창원시 의창구 과외</a>
+        <a href="/pages/경남-창원시-성산구-과외.html" class="region-card" style="text-align:center;">창원시 성산구 과외</a>
+        <a href="/pages/경남-창원시-마산합포구-과외.html" class="region-card" style="text-align:center;">창원시 마산합포구 과외</a>
+        <a href="/pages/경남-창원시-마산회원구-과외.html" class="region-card" style="text-align:center;">창원시 마산회원구 과외</a>
+        <a href="/pages/경남-창원시-진해구-과외.html" class="region-card" style="text-align:center;">창원시 진해구 과외</a>
+        <a href="/pages/경남-진주시-과외.html" class="region-card" style="text-align:center;">진주시 과외</a>
+        <a href="/pages/경남-통영시-과외.html" class="region-card" style="text-align:center;">통영시 과외</a>
+        <a href="/pages/경남-사천시-과외.html" class="region-card" style="text-align:center;">사천시 과외</a>
+        <a href="/pages/경남-김해시-과외.html" class="region-card" style="text-align:center;">김해시 과외</a>
+        <a href="/pages/경남-밀양시-과외.html" class="region-card" style="text-align:center;">밀양시 과외</a>
+        <a href="/pages/경남-거제시-과외.html" class="region-card" style="text-align:center;">거제시 과외</a>
+        <a href="/pages/경남-양산시-과외.html" class="region-card" style="text-align:center;">양산시 과외</a>
+        <a href="/pages/경남-의령군-과외.html" class="region-card" style="text-align:center;">의령군 과외</a>
+        <a href="/pages/경남-함안군-과외.html" class="region-card" style="text-align:center;">함안군 과외</a>
+        <a href="/pages/경남-창녕군-과외.html" class="region-card" style="text-align:center;">창녕군 과외</a>
+        <a href="/pages/강원-고성군-과외.html" class="region-card" style="text-align:center;">고성군 과외</a>
+        <a href="/pages/경남-남해군-과외.html" class="region-card" style="text-align:center;">남해군 과외</a>
+        <a href="/pages/경남-하동군-과외.html" class="region-card" style="text-align:center;">하동군 과외</a>
+        <a href="/pages/경남-산청군-과외.html" class="region-card" style="text-align:center;">산청군 과외</a>
+        <a href="/pages/경남-함양군-과외.html" class="region-card" style="text-align:center;">함양군 과외</a>
+        <a href="/pages/경남-거창군-과외.html" class="region-card" style="text-align:center;">거창군 과외</a>
+        <a href="/pages/경남-합천군-과외.html" class="region-card" style="text-align:center;">합천군 과외</a>
+      </div>
+    </div>
+
+    <!-- 제주 -->
+    <div id="r-jeju" class="tab-pane">
+      <div class="region-grid">
+        <a href="/pages/제주-제주시-과외.html" class="region-card" style="text-align:center;">제주시 과외</a>
+        <a href="/pages/제주-서귀포시-과외.html" class="region-card" style="text-align:center;">서귀포시 과외</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 후기 -->
+<section class="section" id="reviews">
+  <div class="section-inner">
+    <p class="section-eyebrow">Reviews</p>
+    <h2 class="section-title">학부모·학생 실제 후기</h2>
+    <div class="divider"></div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">솔직히 처음엔 반신반의했어요. 애가 중2 때부터 수학을 완전히 포기했거든요. 학원도 세 군데나 보냈는데 다 소용없었고, 담임선생님도 "현실적으로 생각하라"고 하셨을 정도였어요. 근데 티처스에서 연결해준 선생님이 딱 두 달 만에 아이 태도 자체를 바꿔놓으셨어요. 포기했던 애가 먼저 수학 문제 풀겠다고 앉더라고요. 중3 2학기 수학 내신이 58점에서 91점으로 올랐어요. 지금도 믿기지 않습니다.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">박○○ 어머니</div><div class="review-tag">중3 수학 내신 · 인천 부평구</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">고1 첫 중간고사 준비할 때 학원 다니면서도 뭔가 불안했어요. 학원은 전국 공통 교재로만 수업하니까 우리 학교 선생님 출제 스타일이랑 맞지 않는 느낌이었거든요. 티처스 선생님은 처음 상담할 때부터 저희 학교 이름 말하자마자 "그 학교 국어 선생님이 서술형을 이렇게 내시는 경향이 있다"고 바로 말씀해 주시는 거예요. 깜짝 놀랐어요. 실제로 수업하면서 우리 학교 기출문제, 선생님 수업 자료 분석까지 해주셨는데 시험에 거의 그대로 나왔어요. 고1 기말고사 국어 94점, 수학 88점 받았어요. 학교 내신은 진짜 학교별 데이터가 있는 선생님한테 받아야 한다는 걸 알았습니다.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">서○○ 어머니</div><div class="review-tag">고1 국어·수학 내신 · 서울 송파구</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">솔직히 처음엔 반신반의했어요. 애가 중2 때부터 수학을 완전히 포기했거든요. 학원도 세 군데나 보냈는데 다 소용없었고, 담임선생님도 "현실적으로 생각하라"고 하셨을 정도였어요. 근데 티처스에서 연결해준 선생님이 딱 두 달 만에 아이 태도 자체를 바꿔놓으셨어요. 포기했던 애가 먼저 수학 문제 풀겠다고 앉더라고요. 중3 2학기 수학 내신이 58점에서 91점으로 올랐어요. 지금도 믿기지 않습니다.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">박○○ 어머니</div><div class="review-tag">중3 수학 내신 · 인천 부평구</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">아이가 초등 6학년인데 영어를 너무 싫어해서 걱정이 컸어요. 학원에서는 진도만 나가다 보니 애가 따라가지를 못하고 자신감이 완전히 바닥이었거든요. 티처스 선생님은 첫 수업에서 아이 수준을 정확하게 파악하시고 아예 기초부터 다시 잡아주셨어요. 3개월 지나니까 영어 듣기평가 만점 받고 왔어요. 아이가 "영어가 이제 재밌어"라고 하는 말 듣는 날 눈물 날 뻔했습니다.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">최○○ 어머니</div><div class="review-tag">초6 영어 기초 · 수원 영통구</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">고1 첫 중간고사를 완전히 망쳤어요. 국어 42점, 수학 38점. 주변에서 재수는 각오하라는 말도 들었고, 저도 솔직히 포기 반이었어요. 티처스에 상담했더니 아이 성향이랑 학습 패턴까지 고려해서 선생님을 골라주시더라고요. 국어는 문제 푸는 방법 자체를 못 배웠던 거였고, 수학은 중학교 개념이 흔들렸던 거였는데 두 분 선생님이 그걸 정확히 짚어주셨어요. 고2 첫 시험에 국어 79점, 수학 74점 받았습니다. 아직 갈 길이 멀지만 애가 이제 "할 수 있다"고 생각하는 게 제일 큰 변화예요.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">이○○ 어머니</div><div class="review-tag">고1→고2 국어·수학 · 고양 일산</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">중학교 때 내내 하위권이라 고등학교 진학 자체가 걱정이었어요. 아이도 공부에 대한 트라우마가 있어서 책상에 앉히는 것 자체가 전쟁이었거든요. 선생님이 처음 한 달은 공부보다 대화에 더 집중하셨대요. 아이가 왜 공부를 싫어하는지, 어떤 걸 좋아하는지. 그러다 보니 자연스럽게 수업으로 이어지더라고요. 고등학교 입학하고 첫 시험에 반에서 15등 했어요. 중학교 때는 꿈도 못 꿀 성적이에요. 선생님 덕분에 아이 인생이 바뀐 것 같아요.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">김○○ 어머니</div><div class="review-tag">중3 전과목 · 부산 해운대</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">대학생 과외 선생님한테 몇 번 데인 적이 있어서 처음엔 티처스도 비슷하겠거니 했어요. 근데 상담 전화에서부터 달랐어요. 아이 성적, 학습 태도, 목표까지 꼼꼼하게 물어보시더니 이틀 후에 선생님 두 분 프로필 보내주셨어요. 고려대 수학과 출신 선생님이셨는데 경력만 9년이시더라고요. 수업 방식도 완전히 달랐어요. 문제만 푸는 게 아니라 왜 틀렸는지 사고 과정을 잡아주시니까 비슷한 유형이 나와도 스스로 풀더라고요. 6개월 만에 수능 수학 3등급 받았습니다.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">정○○ 어머니</div><div class="review-tag">고3 수능 수학 · 서울 노원구</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">직장 다니면서 영어 때문에 너무 스트레스였어요. 해외 거래처 미팅이 잦은데 매번 통역사를 쓸 수도 없고. 화상으로 주 2회 비즈니스 영어 수업 받았는데 선생님이 실제 미팅 상황을 롤플레이로 연습시켜 주세요. 3개월 지나니까 간단한 미팅은 혼자서 진행할 수 있게 됐어요. 회사에서도 달라졌다고 하더라고요. 직장인한테도 정말 강력 추천합니다.</p>
+        <div class="review-author">
+          <svg class="review-avatar" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#2e2e31"/><circle cx="18" cy="14" r="7" fill="#444"/><ellipse cx="18" cy="32" rx="12" ry="8" fill="#444"/></svg>
+          <div><div class="review-name">한○○ 수강생</div><div class="review-tag">성인 비즈니스 영어 · 서울 강남</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="section-inner">
+    <div class="cta-banner">
+      <h2>지금 바로 무료 상담을 신청하세요</h2>
+      <p>24시간 이내 맞춤 선생님 매칭 · 상담 및 매칭 수수료 완전 무료 · 대학생 과외 없음</p>
+      <div class="cta-btns">
+        <a href="https://pf.kakao.com/_RxnbXX/friend" target="_blank" class="btn-primary">💬 카카오톡으로 상담하기</a>
+        <a href="tel:01055516230" class="btn-secondary">📞 010-5551-6230 전화 상담</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 푸터 -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">티처스<span>.</span> Teachus</div>
+    <p class="footer-desc">
+      전국 1:1 방문과외·화상과외·수능·내신·입시컨설팅·성인회화 매칭 플랫폼<br>
+      경력 명문대 전공 출신 교사만 · 대학생 과외 없음 · 상담 무료<br>
+      📞 010-5551-6230 · 💬 카카오톡 채널: 티처스
+    </p>
+    <div class="footer-links">
+      <a href="#services">서비스 안내</a>
+      <a href="#subjects">과목별 과외</a>
+      <a href="#teachers">선생님 소개</a>
+      <a href="#regions">지역별 과외</a>
+      <a href="#reviews">수강 후기</a>
+      <a href="https://pf.kakao.com/_RxnbXX/friend" target="_blank">카카오톡 상담</a>
+      <a href="tel:01055516230">전화 상담</a>
+    </div>
+    <p class="footer-copy">
+      © 2024 티처스 Teachus. All rights reserved.<br>
+      방문과외 | 화상과외 | 수능과외 | 내신과외 | 수학과외 | 영어과외 | 국어과외 | 입시컨설팅 | 경시대회 | 성인영어 | 일본어회화 | 중국어회화
+    </p>
+  </div>
+</footer>
+
+<!-- 플로팅 버튼 -->
+<div class="floating-btns">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHTrhJdxlUpWUL40KFJkSX7Rye1EE2NA_6o4zhjZBGKXIV_A/viewform?usp=publish-editor" target="_blank" class="float-btn float-kakao" title="상담 신청">📋</a>
+  <a href="tel:01055516230" class="float-btn float-call" title="전화 상담">📞</a>
+</div>
+
+<script>
+// 서울 동 데이터
+const seoulDongs = {
+  "강남구": ["개포동","논현동","대치동","도곡동","삼성동","세곡동","수서동","압구정동","역삼동","율현동","일원동","자곡동","청담동"],
+  "강동구": ["강일동","고덕동","길동","둔촌동","명일동","상일동","성내동","암사동","천호동"],
+  "강북구": ["번동","미아동","수유동","우이동"],
+  "강서구": ["가양동","개화동","공항동","등촌동","방화동","염창동","마곡동","화곡동","내발산동","외발산동"],
+  "관악구": ["봉천동","신림동","남현동"],
+  "광진구": ["광장동","구의동","군자동","능동","중곡동","자양동","화양동"],
+  "구로구": ["가리봉동","개봉동","고척동","구로동","신도림동","오류동","온수동"],
+  "금천구": ["가산동","독산동","시흥동"],
+  "노원구": ["공릉동","상계동","월계동","중계동","하계동"],
+  "도봉구": ["도봉동","방학동","쌍문동","창동"],
+  "동대문구": ["답십리동","용두동","이문동","장안동","전농동","제기동","청량리동","회기동","휘경동"],
+  "동작구": ["노량진동","대방동","동작동","본동","사당동","상도동","신대방동"],
+  "마포구": ["공덕동","당인동","대흥동","도화동","동교동","마포동","망원동","상암동","서교동","성산동","신수동","아현동","연남동","염리동","용강동","창전동"],
+  "서대문구": ["남가좌동","냉천동","북가좌동","신촌동","연희동","홍은동","홍제동"],
+  "서초구": ["내곡동","반포동","방배동","서초동","양재동","우면동","잠원동"],
+  "성동구": ["금호동","마장동","성수동","옥수동","왕십리동","용답동","행당동"],
+  "성북구": ["길음동","돈암동","동선동","보문동","삼선동","석관동","성북동","장위동","정릉동","종암동"],
+  "송파구": ["가락동","거여동","마천동","문정동","방이동","삼전동","석촌동","송파동","신천동","오금동","잠실동","장지동"],
+  "양천구": ["목동","신월동","신정동"],
+  "영등포구": ["당산동","대림동","도림동","문래동","신길동","양평동","여의도동","영등포동"],
+  "용산구": ["갈월동","남영동","보광동","서빙고동","이촌동","이태원동","청파동","한강로동","한남동"],
+  "은평구": ["갈현동","구산동","대조동","불광동","수색동","역촌동","응암동","진관동"],
+  "종로구": ["가회동","계동","공평동","교남동","누상동","부암동","사직동","삼청동","숭인동","안국동","연건동","옥인동","원서동","이화동","청운동","통의동","팔판동","평창동","효제동"],
+  "중구": ["광희동","남대문로","명동","봉래동","북창동","소공동","신당동","을지로","장충동","저동","정동","중림동","태평로","필동","황학동","흥인동"],
+  "중랑구": ["면목동","망우동","묵동","상봉동","신내동","중화동"]
+};
+
+function showDong(gu) {
+  const dongs = seoulDongs[gu];
+  if (!dongs) return;
+  
+  document.getElementById('seoul-gu-grid').style.display = 'none';
+  document.getElementById('dong-list').style.display = 'block';
+  document.getElementById('dong-title').textContent = gu + ' 동별 과외';
+  
+  const grid = document.getElementById('dong-grid');
+  grid.innerHTML = dongs.map(dong => 
+    `<div class="region-card" style="text-align:center;cursor:default;">${dong} 과외</div>`
+  ).join('');
+}
+
+function hideDong() {
+  document.getElementById('seoul-gu-grid').style.display = 'grid';
+  document.getElementById('dong-list').style.display = 'none';
+}
+
+// 메인 탭
+function showTab(groupId, targetId) {
+  const tabsWrap = document.getElementById(groupId);
+  tabsWrap.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const section = tabsWrap.closest('.section-inner');
+  section.querySelectorAll(':scope > .tab-pane').forEach(p => p.classList.remove('active'));
+  document.getElementById(targetId).classList.add('active');
+}
+
+// 서브탭
+function showSubTab(tabsId, targetId) {
+  const tabsWrap = document.getElementById(tabsId);
+  tabsWrap.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const parent = tabsWrap.parentElement;
+  parent.querySelectorAll(':scope > .tab-pane').forEach(p => p.classList.remove('active'));
+  document.getElementById(targetId).classList.add('active');
+}
+
+// 카운터 애니메이션
+function animateCounter(el) {
+  const target = parseFloat(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const decimal = parseInt(el.dataset.decimal || 0);
+  const duration = 2000;
+  const steps = 60;
+  const increment = target / steps;
+  let current = 0;
+  let step = 0;
+  const timer = setInterval(() => {
+    step++;
+    current += increment;
+    if (step >= steps) { current = target; clearInterval(timer); }
+    const display = decimal ? current.toFixed(decimal) : Math.floor(current).toLocaleString();
+    el.textContent = display + suffix;
+  }, duration / steps);
+}
+const counterEls = document.querySelectorAll('.stat-num[data-target]');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+counterEls.forEach(el => counterObserver.observe(el));
+
+
+</script>
+
+</body>
+</html>
