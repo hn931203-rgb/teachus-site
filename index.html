@@ -445,7 +445,24 @@
       padding: 9px 5%;
       letter-spacing: .3px;
     }
-  </style>
+  
+    .tc-section { background:radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200,168,75,.1) 0%, transparent 70%), var(--ink-2); padding:70px 5%; text-align:center; border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); }
+    .tc-inner { max-width:1100px; margin:0 auto; }
+    .tc-eyebrow { font-size:.78rem; font-weight:700; letter-spacing:2.5px; color:var(--gold); text-transform:uppercase; margin-bottom:14px; }
+    .tc-title { font-family:var(--font-serif); font-size:clamp(1.7rem,3.6vw,2.5rem); font-weight:900; line-height:1.4; margin-bottom:14px; }
+    .tc-title em { color:var(--gold); font-style:normal; }
+    .tc-sub { font-size:1rem; color:var(--cream-dim); margin-bottom:36px; }
+    .tc-stats { display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-bottom:44px; }
+    .tc-stat { background:var(--ink-3); border:1.5px solid var(--gold-line); border-radius:14px; padding:18px 26px; min-width:140px; }
+    .tc-stat .num { font-family:var(--font-serif); font-size:1.7rem; font-weight:900; color:var(--gold); line-height:1; }
+    .tc-stat .label { font-size:.8rem; color:var(--cream-faint); margin-top:6px; }
+    .tc-grid { display:grid; grid-template-columns:repeat(9,1fr); gap:8px; }
+    @media (max-width:820px){ .tc-grid{ grid-template-columns:repeat(6,1fr); } }
+    @media (max-width:520px){ .tc-grid{ grid-template-columns:repeat(4,1fr); } }
+    .tc-photo { aspect-ratio:1/1; border-radius:10px; overflow:hidden; border:1px solid var(--gold-line); }
+    .tc-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+
+</style>
 </head>
 <body>
 
@@ -784,6 +801,78 @@
     <h2 style="font-family:'Noto Serif KR',serif;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:700;color:#f2ece0;line-height:1.3;margin-bottom:20px;">경력 전문 교사가<br><span style="color:var(--gold);">직접 찾아갑니다</span></h2>
     <p style="font-size:.95rem;color:rgba(242,236,224,.75);margin-bottom:32px;line-height:1.85;">대학생 과외 없음 · 명문대 전공 출신 경력 교사만 · 전국 방문과외·화상과외 모두 가능</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHTrhJdxlUpWUL40KFJkSX7Rye1EE2NA_6o4zhjZBGKXIV_A/viewform?usp=publish-editor" target="_blank" style="background:var(--gold);color:#0c0c0d;font-weight:700;font-size:.92rem;padding:14px 32px;border-radius:6px;display:inline-flex;align-items:center;gap:8px;">📋 무료 상담 신청</a>
+  </div>
+</section>
+
+
+<!-- 선생님 콜라주 -->
+<section class="tc-section">
+  <div class="tc-inner">
+    <p class="tc-eyebrow">Teachers</p>
+    <h2 class="tc-title">경력 전문 교사진이<br><em>압도적인 실력 차이</em>를 만듭니다</h2>
+    <p class="tc-sub">대학생 과외 없이, 검증된 경력 교사만 만나보세요</p>
+    <div class="tc-stats">
+      <div class="tc-stat"><div class="num">7년+</div><div class="label">평균 교습 경력</div></div>
+      <div class="tc-stat"><div class="num">4,000+</div><div class="label">누적 상담 건수</div></div>
+      <div class="tc-stat"><div class="num">54명</div><div class="label">전문 교사진</div></div>
+      <div class="tc-stat"><div class="num">100%</div><div class="label">교육청 정식등록</div></div>
+    </div>
+    <div class="tc-grid">
+<div class="tc-photo"><img src="/images/teachers-collage/teacher01.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher02.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher03.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher04.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher05.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher06.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher07.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher08.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher09.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher10.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher11.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher12.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher13.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher14.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher15.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher16.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher17.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher18.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher19.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher20.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher21.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher22.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher23.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher24.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher25.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher26.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher27.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher28.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher29.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher30.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher31.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher32.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher33.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher34.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher35.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher36.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher37.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher38.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher39.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher40.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher41.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher42.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher43.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher44.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher45.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher46.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher47.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher48.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher49.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher50.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher51.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher52.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher53.jpg" alt="티처스 선생님" loading="lazy"></div>
+<div class="tc-photo"><img src="/images/teachers-collage/teacher54.jpg" alt="티처스 선생님" loading="lazy"></div>
+    </div>
   </div>
 </section>
 
