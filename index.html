@@ -242,19 +242,17 @@
     .section-title {
       font-family: var(--font-ko);
       font-size: clamp(1.9rem, 3.6vw, 2.6rem);
-      font-weight: 700;
-      margin-bottom: 6px;
+      font-weight: 900;
+      margin-bottom: 10px;
       line-height: 1.3;
-      display: inline-block;
+      color: var(--cream);
+      text-shadow:
+        0 0 6px rgba(223,193,122,.85),
+        0 0 18px rgba(200,168,75,.55),
+        0 0 34px rgba(200,168,75,.3);
     }
     .section-sub { font-size: 1.02rem; color: var(--cream-dim); margin-bottom: 48px; }
-    .divider {
-      width: 150px; height: 18px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 24'%3E%3Cpath d='M4,14 Q40,4 90,11 T180,9 T296,12' stroke='%23f2ece0' stroke-width='9' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      margin: 2px 0 44px;
-    }
+    .divider { width: 44px; height: 3px; background: var(--gold); margin: 16px 0 44px; border-radius: 2px; }
 
     /* 서비스 그리드 */
     .service-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
@@ -268,9 +266,9 @@
     }
     .service-card:hover { border-color: var(--gold); background: var(--gold-dim); transform: translateY(-2px); }
     a.service-card { display: block; cursor: pointer; }
-    .service-icon { font-size: 1.8rem; margin-bottom: 12px; }
-    .service-card h3 { font-family: var(--font-ko); font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
-    .service-card p { font-size: .78rem; color: var(--cream-faint); line-height: 1.6; }
+    .service-icon { font-size: 2.1rem; margin-bottom: 12px; }
+    .service-card h3 { font-family: var(--font-ko); font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; }
+    .service-card p { font-size: .9rem; color: var(--cream-faint); line-height: 1.6; }
 
     /* 과목 탭 */
     .tabs-wrap { margin-bottom: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -280,7 +278,7 @@
       color: var(--cream-dim);
       padding: 8px 18px;
       border-radius: 40px;
-      font-size: .82rem; font-weight: 500;
+      font-size: .94rem; font-weight: 500;
       cursor: pointer;
       font-family: var(--font-sans);
       transition: all var(--trans);
@@ -300,8 +298,8 @@
       transition: all var(--trans);
     }
     .subject-card:hover { border-color: var(--gold); background: var(--gold-dim); }
-    .subject-card h4 { font-size: .88rem; font-weight: 700; margin-bottom: 4px; }
-    .subject-card p { font-size: .73rem; color: var(--cream-faint); }
+    .subject-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .subject-card p { font-size: .85rem; color: var(--cream-faint); }
 
     /* 선생님 카드 */
     .teacher-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
@@ -325,15 +323,15 @@
       position: absolute; bottom: 10px; left: 10px;
       background: var(--gold);
       color: var(--ink);
-      font-size: .65rem; font-weight: 700;
+      font-size: .78rem; font-weight: 700;
       padding: 3px 8px; border-radius: 20px;
       letter-spacing: .5px;
     }
     .teacher-info { padding: 16px; }
-    .teacher-info h3 { font-size: .92rem; font-weight: 700; margin-bottom: 4px; }
-    .teacher-info .univ { font-size: .78rem; color: var(--gold); margin-bottom: 6px; }
-    .teacher-info .career { font-size: .73rem; color: var(--cream-faint); }
-    .teacher-stars { color: var(--gold); font-size: .8rem; margin-top: 8px; }
+    .teacher-info h3 { font-size: 1.04rem; font-weight: 700; margin-bottom: 4px; }
+    .teacher-info .univ { font-size: .9rem; color: var(--gold); margin-bottom: 6px; }
+    .teacher-info .career { font-size: .85rem; color: var(--cream-faint); }
+    .teacher-stars { color: var(--gold); font-size: .92rem; margin-top: 8px; }
 
     /* 지역 섹션 */
     .region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
@@ -342,7 +340,7 @@
       border: 1px solid var(--gold-line);
       border-radius: 8px;
       padding: 14px 12px;
-      font-size: .82rem;
+      font-size: .94rem;
       font-weight: 500;
       text-align: center;
       transition: all var(--trans);
@@ -358,12 +356,12 @@
       border-radius: 12px;
       padding: 24px;
     }
-    .review-stars { color: var(--gold); font-size: .85rem; margin-bottom: 10px; }
-    .review-text { font-size: .85rem; color: var(--cream-dim); line-height: 1.75; margin-bottom: 16px; }
+    .review-stars { color: var(--gold); font-size: .98rem; margin-bottom: 10px; }
+    .review-text { font-size: .98rem; color: var(--cream-dim); line-height: 1.75; margin-bottom: 16px; }
     .review-author { display: flex; align-items: center; gap: 10px; }
     .review-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: var(--ink-3); }
-    .review-name { font-size: .78rem; font-weight: 700; }
-    .review-tag { font-size: .7rem; color: var(--cream-faint); }
+    .review-name { font-size: .9rem; font-weight: 700; }
+    .review-tag { font-size: .82rem; color: var(--cream-faint); }
 
     /* CTA 배너 */
     .cta-banner {
@@ -373,8 +371,8 @@
       padding: 56px 40px;
       text-align: center;
     }
-    .cta-banner h2 { font-family: var(--font-ko); font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; margin-bottom: 12px; }
-    .cta-banner p { color: var(--cream-dim); font-size: .92rem; margin-bottom: 32px; }
+    .cta-banner h2 { font-family: var(--font-ko); font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 700; margin-bottom: 12px; }
+    .cta-banner p { color: var(--cream-dim); font-size: 1.04rem; margin-bottom: 32px; }
     .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
     /* 플로팅 버튼 */
@@ -405,13 +403,13 @@
       padding: 48px 5% 32px;
     }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
-    .footer-logo { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 900; color: var(--cream); margin-bottom: 8px; }
+    .footer-logo { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 900; color: var(--cream); margin-bottom: 8px; }
     .footer-logo span { color: var(--gold); }
-    .footer-desc { font-size: .8rem; color: var(--cream-faint); margin-bottom: 24px; line-height: 1.7; }
+    .footer-desc { font-size: .92rem; color: var(--cream-faint); margin-bottom: 24px; line-height: 1.7; }
     .footer-links { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
-    .footer-links a { font-size: .78rem; color: var(--cream-faint); transition: color var(--trans); }
+    .footer-links a { font-size: .9rem; color: var(--cream-faint); transition: color var(--trans); }
     .footer-links a:hover { color: var(--gold); }
-    .footer-copy { font-size: .72rem; color: var(--cream-faint); border-top: 1px solid var(--gold-line); padding-top: 20px; }
+    .footer-copy { font-size: .84rem; color: var(--cream-faint); border-top: 1px solid var(--gold-line); padding-top: 20px; }
 
     /* 반응형 */
     @media (max-width: 900px) {
@@ -431,7 +429,7 @@
       background: var(--gold);
       color: var(--ink);
       text-align: center;
-      font-size: .8rem;
+      font-size: .92rem;
       font-weight: 700;
       padding: 9px 5%;
       letter-spacing: .3px;
