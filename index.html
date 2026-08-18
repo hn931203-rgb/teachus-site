@@ -124,6 +124,14 @@
     .nav { display: flex; gap: 28px; align-items: center; }
     .nav a { font-size: .82rem; font-weight: 500; color: var(--cream-dim); transition: color var(--trans); letter-spacing: .3px; }
     .nav a:hover { color: var(--gold); }
+    .nav-drop { position: relative; }
+    .nav-drop > .nav-drop-label { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; font-size: .82rem; font-weight: 500; color: var(--cream-dim); transition: color var(--trans); letter-spacing: .3px; background: none; border: none; font-family: inherit; padding: 0; }
+    .nav-drop > .nav-drop-label:hover, .nav-drop.open > .nav-drop-label { color: var(--gold); }
+    .nav-drop > .nav-drop-label::after { content: '▾'; font-size: .7em; }
+    .nav-drop-menu { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%); background: var(--ink-2); border: 1px solid var(--gold-line); border-radius: var(--r); padding: 8px; min-width: 160px; display: none; flex-direction: column; gap: 2px; box-shadow: 0 12px 28px rgba(0,0,0,.35); z-index: 200; }
+    .nav-drop:hover > .nav-drop-menu, .nav-drop.open > .nav-drop-menu { display: flex; }
+    .nav-drop-menu a { font-size: .82rem; padding: 9px 12px; border-radius: 5px; white-space: nowrap; }
+    .nav-drop-menu a:hover { background: var(--ink-3); color: var(--gold); }
     .nav-cta {
       background: var(--gold);
       color: var(--ink) !important;
@@ -428,7 +436,8 @@
       .hero-inner { grid-template-columns: 1fr; }
       .hero-card { display: block; margin-top: 32px; }
       .nav { gap: 14px; }
-      .nav a:not(.nav-cta) { display: none; }
+      .nav > a:not(.nav-cta) { display: none; }
+      .nav-drop-menu { left: auto; right: 0; transform: none; }
     }
     @media (max-width: 600px) {
       .section { padding: 56px 5%; }
@@ -475,9 +484,35 @@
   <div class="logo">티처스<span>.</span> <small style="font-size:.65em;font-weight:400;letter-spacing:1px;color:var(--cream-faint);">Teachus</small></div>
   <nav class="nav">
     <a href="#services">서비스</a>
-    <a href="#subjects">과목</a>
+    <div class="nav-drop" onclick="this.classList.toggle('open')">
+      <button type="button" class="nav-drop-label">전국과외</button>
+      <div class="nav-drop-menu">
+        <a href="#regions">지역별 과외</a>
+        <a href="/pages/학교찾기.html">학교별 과외</a>
+      </div>
+    </div>
+    <div class="nav-drop" onclick="this.classList.toggle('open')">
+      <button type="button" class="nav-drop-label">과목별</button>
+      <div class="nav-drop-menu">
+        <a href="/pages/%EA%B5%AD%EC%96%B4%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">국어과외</a>
+        <a href="/pages/%EC%88%98%ED%95%99%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">수학과외</a>
+        <a href="/pages/%EC%98%81%EC%96%B4%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">영어과외</a>
+        <a href="/pages/%EA%B3%BC%ED%95%99%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">과학과외</a>
+        <a href="/pages/%EC%82%AC%ED%9A%8C%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">사회과외</a>
+        <a href="/pages/%EC%97%AD%EC%82%AC%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">역사과외</a>
+        <a href="/pages/%EB%85%BC%EC%88%A0%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">논술과외</a>
+        <a href="/pages/%EC%BD%94%EB%94%A9%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">코딩과외</a>
+        <a href="/pages/%EA%B2%80%EC%A0%95%EA%B3%A0%EC%8B%9C%EA%B3%BC%EC%99%B8-%EC%A0%84%EC%B2%B4.html">검정고시과외</a>
+      </div>
+    </div>
+    <div class="nav-drop" onclick="this.classList.toggle('open')">
+      <button type="button" class="nav-drop-label">입시</button>
+      <div class="nav-drop-menu">
+        <a href="/pages/%EC%9E%85%EC%8B%9C%EB%85%BC%EC%88%A0%EA%B3%BC%EC%99%B8.html">입시논술</a>
+        <a href="/services/%EC%9E%85%EC%8B%9C%EC%BB%A8%EC%84%A4%ED%8C%85.html">입시컨설팅</a>
+      </div>
+    </div>
     <a href="#teachers">선생님</a>
-    <a href="#regions">지역</a>
     <a href="#reviews">후기</a>
     <a href="tel:01055516230" class="nav-cta">📞 무료 상담</a>
   </nav>
