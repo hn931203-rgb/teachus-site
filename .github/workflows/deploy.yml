@@ -11,21 +11,42 @@ concurrency:
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 180
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: FTP Deploy (upload only, never deletes remote files)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./
-          server-dir: /www/
-          dangerous-clean-slate: false
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/ftp-secret.txt
-            **/README.md
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: FTP Deploy via lftp (auto-retry, upload only, never deletes remote files)
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          success=0
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            echo "=== lftp mirror attempt $attempt ==="
+            lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "$FTP_SERVER" <<'EOF'
+          set ftp:passive-mode yes
+          set net:max-retries 20
+          set net:timeout 20
+          set net:reconnect-interval-base 3
+          set net:reconnect-interval-max 15
+          set net:persist-retries 20
+          set mirror:parallel-transfer-count 1
+          set xfer:clobber yes
+          mirror --reverse --only-newer --no-perms --exclude-glob='.git*' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /www/
+          EOF
+            if [ $? -eq 0 ]; then
+              success=1
+              break
+            fi
+            echo "attempt $attempt failed, retrying in 15s..."
+            sleep 15
+          done
+          if [ "$success" -ne 1 ]; then
+            echo "All 10 attempts failed"
+            exit 1
+          fi
