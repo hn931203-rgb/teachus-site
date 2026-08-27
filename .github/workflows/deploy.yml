@@ -28,7 +28,7 @@ jobs:
           success=0
           for attempt in 1 2 3 4 5; do
             echo "=== lftp sftp mirror attempt $attempt ==="
-            lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER" <<'EOF'
+            if lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER" <<'EOF'
           set sftp:auto-confirm yes
           set net:max-retries 15
           set net:timeout 30
@@ -38,7 +38,7 @@ jobs:
           set xfer:clobber yes
           mirror --reverse --only-newer --no-perms --exclude-glob='.git*' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /hn1203000/www/
           EOF
-            if [ $? -eq 0 ]; then
+            then
               success=1
               break
             fi
