@@ -34,8 +34,10 @@ jobs:
           set net:timeout 30
           set net:reconnect-interval-base 3
           set net:reconnect-interval-max 15
-          set mirror:parallel-transfer-count 3
+          set mirror:parallel-transfer-count 1
           set xfer:clobber yes
+          set xfer:use-temp-file yes
+          set xfer:temp-file-name '*.lftp-tmp-*'
           mirror --reverse --only-newer --no-perms --exclude-glob='.git*' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /hn1203000/www/
           EOF
             then
