@@ -11,7 +11,7 @@ concurrency:
 jobs:
   sftp-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 150
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,8 +36,6 @@ jobs:
           set net:reconnect-interval-max 15
           set mirror:parallel-transfer-count 3
           set xfer:clobber yes
-          set xfer:use-temp-file yes
-          set xfer:temp-file-name '*.lftp-tmp-*'
           mirror --reverse --only-newer --no-perms --exclude-glob='.git*' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /hn1203000/www/
           EOF
             then
