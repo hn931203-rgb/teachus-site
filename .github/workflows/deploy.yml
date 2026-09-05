@@ -36,7 +36,7 @@ jobs:
           set net:reconnect-interval-max 15
           set mirror:parallel-transfer-count 3
           set xfer:clobber yes
-          mirror --reverse --only-newer --no-perms --exclude-glob='.git*' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /hn1203000/www/
+          mirror --reverse --only-newer --no-perms --exclude-glob='.git/' --exclude-glob='.git*' --exclude='(^|/)\.git/' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /hn1203000/www/
           EOF
             then
               success=1
