@@ -3,42 +3,97 @@ name: Deploy to Cafe24 (SFTP)
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      full_mirror:
+        description: "Force a full re-mirror of every file (use for repair after corruption, not routine deploys)"
+        type: boolean
+        default: false
 
 concurrency:
   group: ftp-deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   sftp-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 90
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y lftp
 
-      - name: SFTP Deploy via lftp (upload only, never deletes remote files)
+      - name: Determine changed files (incremental deploy)
+        id: changes
+        run: |
+          if [ "${{ github.event.inputs.full_mirror }}" = "true" ]; then
+            echo "Manual full-mirror repair requested - using full file list"
+            git ls-files > changed_files.txt
+          else
+            BEFORE_SHA="${{ github.event.before }}"
+            AFTER_SHA="${{ github.event.after }}"
+            ZERO_SHA="0000000000000000000000000000000000000000"
+            if [ -z "$BEFORE_SHA" ] || [ "$BEFORE_SHA" = "$ZERO_SHA" ] || ! git cat-file -e "$BEFORE_SHA" 2>/dev/null; then
+              echo "No usable previous SHA - falling back to full file list"
+              git ls-files > changed_files.txt
+            else
+              git diff --name-only --diff-filter=ACMR "$BEFORE_SHA" "$AFTER_SHA" > changed_files.txt
+            fi
+          fi
+          # never try to upload excluded/local-only files
+          grep -v -E '^(\.git/|\.github/|ftp-secret\.txt$|README\.md$|generate-.*\.js$)' changed_files.txt > changed_files_filtered.txt || true
+          mv changed_files_filtered.txt changed_files.txt
+          echo "Changed file count: $(wc -l < changed_files.txt)"
+          head -30 changed_files.txt
+
+      - name: SFTP upload changed files only
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
+          if [ ! -s changed_files.txt ]; then
+            echo "No changed files to upload."
+            exit 0
+          fi
+
+          {
+            echo "set sftp:auto-confirm yes"
+            echo "set net:max-retries 15"
+            echo "set net:timeout 30"
+            echo "set net:reconnect-interval-base 3"
+            echo "set net:reconnect-interval-max 15"
+            echo "set xfer:clobber yes"
+            echo "set mirror:parallel-transfer-count 1"
+
+            # create every needed remote directory once (deduped, deepest-first ok since -p handles parents)
+            while IFS= read -r f; do
+              d=$(dirname "$f")
+              if [ "$d" != "." ]; then
+                echo "$d"
+              fi
+            done < changed_files.txt | sort -u | while IFS= read -r d; do
+              printf 'mkdir -p -f "/hn1203000/www/%s"\n' "$d"
+            done
+
+            while IFS= read -r f; do
+              [ -f "$f" ] || continue
+              printf 'put "%s" -o "/hn1203000/www/%s"\n' "$f" "$f"
+            done < changed_files.txt
+          } > lftp_script.txt
+
+          echo "=== lftp script preview (first 20 lines) ==="
+          head -20 lftp_script.txt
+          echo "=== total lftp commands: $(wc -l < lftp_script.txt) ==="
+
           success=0
           for attempt in 1 2 3 4 5; do
-            echo "=== lftp sftp mirror attempt $attempt ==="
-            if lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER" <<'EOF'
-          set sftp:auto-confirm yes
-          set net:max-retries 15
-          set net:timeout 30
-          set net:reconnect-interval-base 3
-          set net:reconnect-interval-max 15
-          set mirror:parallel-transfer-count 3
-          set xfer:clobber yes
-          mirror --reverse --only-newer --no-perms --exclude-glob='.git/' --exclude-glob='.git*' --exclude='(^|/)\.git/' --exclude='ftp-secret.txt' --exclude='README.md' --verbose ./ /hn1203000/www/
-          EOF
-            then
+            echo "=== upload attempt $attempt ==="
+            if lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER" -f lftp_script.txt; then
               success=1
               break
             fi
