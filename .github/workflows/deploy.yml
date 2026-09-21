@@ -69,6 +69,7 @@ jobs:
             echo "set net:reconnect-interval-max 15"
             echo "set xfer:clobber yes"
             echo "set mirror:parallel-transfer-count 1"
+            printf 'open -u "%s","%s" "sftp://%s"\n' "$FTP_USERNAME" "$FTP_PASSWORD" "$FTP_SERVER"
 
             # create every needed remote directory once (deduped, deepest-first ok since -p handles parents)
             while IFS= read -r f; do
@@ -93,7 +94,7 @@ jobs:
           success=0
           for attempt in 1 2 3 4 5; do
             echo "=== upload attempt $attempt ==="
-            if lftp -u "$FTP_USERNAME","$FTP_PASSWORD" "sftp://$FTP_SERVER" -f lftp_script.txt; then
+            if lftp -f lftp_script.txt; then
               success=1
               break
             fi
