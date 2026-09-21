@@ -30,6 +30,7 @@ jobs:
       - name: Determine changed files (incremental deploy)
         id: changes
         run: |
+          git config core.quotepath off
           if [ "${{ github.event.inputs.full_mirror }}" = "true" ]; then
             echo "Manual full-mirror repair requested - using full file list"
             git ls-files > changed_files.txt
