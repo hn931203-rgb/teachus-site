@@ -9,6 +9,10 @@ on:
         description: "Force a full re-mirror of every file (use for repair after corruption, not routine deploys)"
         type: boolean
         default: false
+      target_files:
+        description: "Newline-separated repo-relative file paths to force re-upload, bypassing git diff (for repairing specific corrupted/failed files)"
+        type: string
+        default: ""
 
 concurrency:
   group: ftp-deploy
@@ -29,9 +33,14 @@ jobs:
 
       - name: Determine changed files (incremental deploy)
         id: changes
+        env:
+          TARGET_FILES: ${{ github.event.inputs.target_files }}
         run: |
           git config core.quotepath off
-          if [ "${{ github.event.inputs.full_mirror }}" = "true" ]; then
+          if [ -n "$TARGET_FILES" ]; then
+            echo "Targeted repair requested - using explicit file list"
+            printf '%s\n' "$TARGET_FILES" | sed '/^\s*$/d' > changed_files.txt
+          elif [ "${{ github.event.inputs.full_mirror }}" = "true" ]; then
             echo "Manual full-mirror repair requested - using full file list"
             git ls-files > changed_files.txt
           else
