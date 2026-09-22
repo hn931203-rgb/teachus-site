@@ -17,6 +17,10 @@ on:
         description: "Dry-run only: list remote files that don't exist locally (nothing is deleted or uploaded)"
         type: boolean
         default: false
+      delete_orphans:
+        description: "Actually delete remote files that don't exist locally (recomputes the same diff as list_orphans, then removes them)"
+        type: boolean
+        default: false
 
 concurrency:
   group: ftp-deploy
@@ -64,8 +68,8 @@ jobs:
           echo "Changed file count: $(wc -l < changed_files.txt)"
           head -30 changed_files.txt
 
-      - name: List orphaned remote files (dry run, no changes made)
-        if: github.event.inputs.list_orphans == 'true'
+      - name: Compute orphaned remote files (remote but not local)
+        if: github.event.inputs.list_orphans == 'true' || github.event.inputs.delete_orphans == 'true'
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -92,7 +96,7 @@ jobs:
           head -50 orphan_candidates.txt
 
       - name: Upload orphan list artifact
-        if: github.event.inputs.list_orphans == 'true'
+        if: github.event.inputs.list_orphans == 'true' || github.event.inputs.delete_orphans == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: orphan-candidates
@@ -102,8 +106,48 @@ jobs:
             local_files.txt
           retention-days: 7
 
+      - name: Delete orphaned remote files
+        if: github.event.inputs.delete_orphans == 'true'
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          if [ ! -s orphan_candidates.txt ]; then
+            echo "No orphan candidates to delete."
+            exit 0
+          fi
+
+          {
+            echo "set sftp:auto-confirm yes"
+            echo "set net:max-retries 15"
+            echo "set net:timeout 30"
+            echo "set net:reconnect-interval-base 3"
+            echo "set net:reconnect-interval-max 15"
+            printf 'open -u "%s","%s" "sftp://%s"\n' "$FTP_USERNAME" "$FTP_PASSWORD" "$FTP_SERVER"
+            while IFS= read -r f; do
+              printf 'rm -f "/hn1203000/www/%s"\n' "$f"
+            done < orphan_candidates.txt
+          } > lftp_delete_script.txt
+
+          echo "=== total delete commands: $(wc -l < lftp_delete_script.txt) ==="
+
+          success=0
+          for attempt in 1 2 3; do
+            echo "=== delete attempt $attempt ==="
+            if lftp -f lftp_delete_script.txt; then
+              success=1
+              break
+            fi
+            echo "attempt $attempt failed, retrying in 15s..."
+            sleep 15
+          done
+          if [ "$success" -ne 1 ]; then
+            echo "Some deletes may have failed - check log above. Non-fatal, re-run list_orphans to see what's left."
+          fi
+
       - name: SFTP upload changed files only
-        if: github.event.inputs.list_orphans != 'true'
+        if: github.event.inputs.list_orphans != 'true' && github.event.inputs.delete_orphans != 'true'
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
