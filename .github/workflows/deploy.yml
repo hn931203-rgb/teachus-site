@@ -13,6 +13,10 @@ on:
         description: "Newline-separated repo-relative file paths to force re-upload, bypassing git diff (for repairing specific corrupted/failed files)"
         type: string
         default: ""
+      list_orphans:
+        description: "Dry-run only: list remote files that don't exist locally (nothing is deleted or uploaded)"
+        type: boolean
+        default: false
 
 concurrency:
   group: ftp-deploy
@@ -60,7 +64,46 @@ jobs:
           echo "Changed file count: $(wc -l < changed_files.txt)"
           head -30 changed_files.txt
 
+      - name: List orphaned remote files (dry run, no changes made)
+        if: github.event.inputs.list_orphans == 'true'
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: |
+          git config core.quotepath off
+          git ls-files | grep -v -E '^(\.git/|\.github/|ftp-secret\.txt$|README\.md$|generate-.*\.js$)' | sort > local_files.txt
+          echo "Local file count: $(wc -l < local_files.txt)"
+
+          {
+            echo "set sftp:auto-confirm yes"
+            echo "set net:max-retries 15"
+            echo "set net:timeout 30"
+            printf 'open -u "%s","%s" "sftp://%s"\n' "$FTP_USERNAME" "$FTP_PASSWORD" "$FTP_SERVER"
+            echo 'find /hn1203000/www/'
+          } > list_script.txt
+          lftp -f list_script.txt > remote_find_raw.txt
+
+          sed -e 's#^/hn1203000/www/##' remote_find_raw.txt | grep -v '/$' | grep -v '^$' | sort > remote_files.txt
+          echo "Remote file count: $(wc -l < remote_files.txt)"
+
+          comm -23 remote_files.txt local_files.txt > orphan_candidates.txt
+          echo "=== Orphan candidates (remote but not local): $(wc -l < orphan_candidates.txt) ==="
+          head -50 orphan_candidates.txt
+
+      - name: Upload orphan list artifact
+        if: github.event.inputs.list_orphans == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: orphan-candidates
+          path: |
+            orphan_candidates.txt
+            remote_files.txt
+            local_files.txt
+          retention-days: 7
+
       - name: SFTP upload changed files only
+        if: github.event.inputs.list_orphans != 'true'
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
